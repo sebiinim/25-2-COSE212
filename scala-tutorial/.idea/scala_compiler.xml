@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="scala-tutorial_9574" />
+    <profile name="sbt 2" modules="scala-tutorial">
+      <option name="implicitConversions" value="true" />
+      <option name="deprecationWarnings" value="true" />
+      <option name="featureWarnings" value="true" />
+      <parameters>
+        <parameter value="-explain" />
+        <parameter value="-explain-types" />
+        <parameter value="-P:wartremover:excluded:src\main\scala\kuplrg\Template.scala" />
+        <parameter value="-P:wartremover:excluded:src\main\scala\kuplrg\error.scala" />
+        <parameter value="-P:wartremover:excluded:src\test\scala\kuplrg" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.AsInstanceOf" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.IsInstanceOf" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.MutableDataStructures" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.Null" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.Return" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.Throw" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.Var" />
+        <parameter value="-P:wartremover:traverser:org.wartremover.warts.While" />
+        <parameter value="-P:wartremover:traverser:kuplrg.warts.Array" />
+        <parameter value="-P:wartremover:traverser:kuplrg.warts.TryCatch" />
+        <parameter value="-P:wartremover:cp:file://D:\coding\COSE212-plrg\scala-tutorial/lib/warts.jar" />
+      </parameters>
+      <plugins>
+        <plugin path="D:\coding\COSE212-plrg\scala-tutorial\target\scala-3.3.3\compiler_plugins\wartremover_3.3.3-3.1.6.jar" />
+      </plugins>
+    </profile>
+  </component>
+</project>
