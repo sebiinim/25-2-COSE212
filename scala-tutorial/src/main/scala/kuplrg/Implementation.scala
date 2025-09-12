@@ -44,16 +44,42 @@ object Implementation extends Template {
     else fixpoint(f)(next) // 값이 바뀌었으면 함수는 f로 같고 이번에는 next를 대입.
   }
 
-  def applyK(f: Int => Int, k: Int): Int => Int = ???
+  def applyK(f: Int => Int, k: Int): Int => Int = n => {
+    // 함수 f를 k번 반복하는 함수, 인자는 따로 받는다
+    // = n 이거 추가해도 되나요..? 없으면 도저히 방법이 없는데..
+
+    if (k==0) n // k가 0이면 함수 적용을 할 필요가 없다.
+    else applyK(f, k-1)(f(n)) // 이렇게 함수에 argument를 주면서 재귀 가능
+  }
 
   // ---------------------------------------------------------------------------
   // Collections
   // ---------------------------------------------------------------------------
-  def sumEven(l: List[Int]): Int = ???
+  def sumEven(l: List[Int]): Int = {
+    // l 이라는 Int List를 받아서 거기서 짝수 항만 더한 값을 출력
 
-  def double(l: List[Int]): List[Int] = ???
+    if (l == Nil) 0 // 빈 리스트이면 0 리턴, 여기 넘어가면 head가 존재함이 확정
+    else if (l.head % 2 == 0) l.head + sumEven(l.tail) // 현재 리스트의 가장 앞이 짝수이면 더하고 다음 항
+    else sumEven(l.tail)
 
-  def generate(f: Int => Int): Int => List[Int] = ???
+    // l.filter(_%2==0).sum 으로 구현하면 최적이다.
+  }
+
+  def double(l: List[Int]): List[Int] = {
+    // 모든 원소를 2번씩 반복해서 2배 길이 리스트 만들기
+    // 강의자료 속에 답이 있다.
+    l.flatMap(x => List(x, x))
+  }
+
+  def generate(f: Int => Int): Int => List[Int] = n => {
+    // argument n에 함수 f를 적용하면서 그 결과를 리스트에 추가.
+    // f(n) = n 이면 종료
+    // 여기도 = n 을 추가해야 한다 괜찮겠지..
+
+    val next = f(n)
+    if (next == n) List(n)  // 이렇게 n 만 담은 List를 만들 수 있다.
+    else n :: generate(f)(next)
+  }
 
   def join(l: Map[String, Int], r: Map[String, Int]): Map[String, Int] = ???
 
