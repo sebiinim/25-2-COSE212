@@ -160,20 +160,82 @@ object Implementation extends Template {
     postorder(t).count(f)
 
 
-  def merge(left: Tree, right: Tree): Tree = ???
+//  t match
+//    case Leaf(n) => n
+//    case Branch(_, n, _) => n
+
+  def merge(left: Tree, right: Tree): Tree = (left, right) match
+    case (Branch(ll, lv, lr), Branch(rl, rv, rr)) =>
+      Branch(merge(ll, rl), lv+rv, merge(lr, rr))
+
+    case (Leaf(n), Branch(_, rv, _))  =>
+      Leaf(n + rv)
+
+    case (Branch(_, lv, _), Leaf(n))  =>
+      Leaf(lv + n)
+
+    case (Leaf(n1), Leaf(n2)) =>
+      Leaf(n1 + n2)
+
 
   // ---------------------------------------------------------------------------
   // Boolean Expressions
   // ---------------------------------------------------------------------------
   import BE.*
 
-  def isImply(expr: BE): Boolean = ???
+  def isImply(expr: BE): Boolean = expr match
+    // expr이 Imply인지 확인하는 함수, 그냥 case 쓰면 된다. Imply 뒤에 (_, _)를 꼭 붙이자.
+    case Imply(_, _) => true
+    case _ => false
 
-  def noAnd(expr: BE): Boolean = ???
+  def noAnd(expr: BE): Boolean = expr match
+    // expr 에 And가 안 들어가는지 확인하는 함수
+    // 패턴 대안 | 를 쓰면 안에서는 변수 바인딩을 못 쓴다. Or(l, r) | Imply(l, r) | Not(l, r) 했더니 오류 생겼다.
+    case Literal(_) | Variable(_) => true
+    case And(l, r) => false
+    case Or(l, r) => noAnd(l) && noAnd(r)
+    case Imply(l, r)  => noAnd(l) && noAnd(r)
+    case Not(v) => noAnd(v)
 
-  def subExprs(expr: BE): Set[BE] = ???
 
-  def getString(expr: BE): String = ???
+  def subExprs(expr: BE): Set[BE] = expr match {
+    // 오옹 이게 왜 되지
 
-  def eval(expr: BE, env: Map[String, Boolean]): Boolean = ???
+    case And(l, r) => subExprs(l) ++ subExprs(r) + expr
+    case Or(l, r) => subExprs(l) ++ subExprs(r) + expr
+    case Imply(l, r) => subExprs(l) ++ subExprs(r) + expr
+    case Not(v) => subExprs(v) + expr
+
+    case Literal(v) => Set(Literal(v))
+    case Variable(v) => Set(Variable(v))
+  }
+
+  def getString(expr: BE): String = expr match {
+    // 그냥 잘 맞춰보자. 띄어쓰기도 해 줘야 한다.
+
+    case Literal(true) => "#t"
+    case Literal(false) => "#f"
+    case Variable(v) => v
+
+    case And(l, r) => "(" + getString(l) + " && " + getString(r) + ")"
+    case Or(l, r) => "(" + getString(l) + " || " + getString(r) + ")"
+    case Imply(l, r) => "(" + getString(l) + " => " + getString(r) + ")"
+    case Not(v) => "!" + getString(v)
+
+  }
+
+  def eval(expr: BE, env: Map[String, Boolean]): Boolean = expr match
+    // env에 해당하는 대로 변수에 값을 대입, 결과가 T인지 F인지 결정
+    case Literal(true) => true
+    case Literal(false) => false
+
+    case Variable(v) => env.getOrElse(v, false)
+
+    case And(l, r) => eval(l, env) && eval(r, env)
+
+    case Or(l, r) => eval(l, env) || eval(r, env)
+
+    case Imply(l, r) => !eval(l, env) || eval(r, env)  // l이 거짓이면 항상 참, l이 참이면 r도 참이어야 참.
+
+    case Not(v) => !eval(v, env)
 }
