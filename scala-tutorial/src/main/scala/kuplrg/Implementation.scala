@@ -121,15 +121,44 @@ object Implementation extends Template {
   // Trees
   // ---------------------------------------------------------------------------
   import Tree.*
+  // Tree는 수업 때 배운 Leaf, Branch 구조 그대로.
+  //  enum Tree:
+  //    case Leaf(value: Int)
+  //    case Branch(left: Tree, value: Int, right: Tree)
 
-  def heightOf(t: Tree): Int =
+  def heightOf(t: Tree): Int = t match
+    // Tree의 height 찾기. 최대를 찾아야 한다.
+    // root는 0부터 시작한다.
+    // BFS, DFS 써야 하나? 재귀인가
 
+    case Leaf(_)  => 0
+    case Branch(l, _, r)  => 1 + math.max(heightOf(l), heightOf(r))
 
-  def max(t: Tree): Int = ???
+  def max(t: Tree): Int = t match
+    // tree 중 최댓값 찾기, 이건 좀 쉽다. max 중첩이라 마음에 걸리긴 하지만..
 
-  def postorder(t: Tree): List[Int] = ???
+    case Leaf(n)  => n
+    case Branch(l, n, r)  => math.max(math.max(max(l), max(r)), n)
 
-  def count(t: Tree, f: Int => Boolean): Int = ???
+  def postorder(t: Tree): List[Int] = t match {
+    // postorder 순서로 돈다. 재귀 쓸듯?
+    // List(n) 으로 주는게 핵심이었다.
+
+    case Leaf(n)  => List(n)
+    case Branch(l, n, r)  => postorder(l) ++ postorder(r) ++ List(n)
+  }
+
+  def count(t: Tree, f: Int => Boolean): Int = t match
+    // Tree 중에서 f 를 만족하는 녀석의 개수
+    // 재귀를 이용한 정석적인 방법
+
+    case Leaf(n)  => if f(n) then 1 else 0
+    case Branch(l, n, r)  => count(l, f) + (if f(n) then 1 else 0) + count(r, f)
+
+  def count2(t: Tree, f: Int => Boolean): Int =
+    // 어차피 트리를 돌 건데 위에서 구현한 함수를 써도 되나요??
+    postorder(t).count(f)
+
 
   def merge(left: Tree, right: Tree): Tree = ???
 
