@@ -81,16 +81,49 @@ object Implementation extends Template {
     else n :: generate(f)(next)
   }
 
-  def join(l: Map[String, Int], r: Map[String, Int]): Map[String, Int] = ???
+  def join(l: Map[String, Int], r: Map[String, Int]): Map[String, Int] = {
+    // 두 개의 Map을 받아서 같은 key가 있으면 value를 더하고 다른 key는 그냥 쓰기
 
-  def subsets(set: Set[Int]): List[Set[Int]] = ???
+    val lrKeySet = l.keySet ++ r.keySet  // 집합끼리 합칠 때는 ++ 쓰자
+
+    // for, while 대신 map 을 쓰자. lrKeySet의 모든 값 k에 대해서 k -> value의 합을 구한다. 이건 Set이니 Map으로 바꾼다.
+    lrKeySet.map ( k =>
+      k -> (l.getOrElse(k, 0) + r.getOrElse(k, 0))
+    ).toMap
+  }
+
+  def subsets(set: Set[Int]): List[Set[Int]] = {
+    // 상당한 난제다. Set을 받아서 가능한 모든 부분집합 Set을 사전순으로 출력해야 한다.
+    // 앞쪽 수가 작을수록 먼저. 짧을수록 먼저.
+    // 찾아보니 이걸 power Set 이라고 한다.
+
+    val sortedList = set.toList.sorted // List로 바꿔야 sort가 된다.
+
+    // 파워셋을 만들어주는 함수
+    // foldLeft를 사용한다. 초깃값은 empty한 Int List의 List
+    // foldLeft에 익명 함수를 준다. foldLeft는 항상 (누적값, 현재 원소) => 누적값 형태의 함수만 받는다.
+    // acc는 누적 배열, x는 현재값.
+
+    // 파워셋 만들기
+    val all: List[List[Int]] =
+      sortedList.foldLeft(List(List.empty[Int])) { (acc, x) =>
+        acc ++ acc.map(xs => x :: xs)   // acc의 모든 원소(xs) 마다 앞에 foldLeft의 현재값 x를 붙이는 익명 함수
+      }
+
+    all.filter(_.nonEmpty)  // 공집합 제거
+      .map(_.sorted)        // 원소 내부를 sort
+      .distinct             // 겹치는 녀석 제거
+      .sorted               // 원소를 sort
+      .map(_.toSet)         // 모든 원소를 List에서 Set으로 변경
+  }
 
   // ---------------------------------------------------------------------------
   // Trees
   // ---------------------------------------------------------------------------
   import Tree.*
 
-  def heightOf(t: Tree): Int = ???
+  def heightOf(t: Tree): Int =
+
 
   def max(t: Tree): Int = ???
 
