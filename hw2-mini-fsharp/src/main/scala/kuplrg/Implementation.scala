@@ -36,7 +36,7 @@ object Implementation extends Template {
 
   private def asTuple(v: Value): List[Value] = v match {
     case TupleV(vs) => vs
-    case _ => error(E_INV_OP)
+    case _ => error(E_INV_PM)
   }
 
   private def asSome(v: Value): Value = v match {
@@ -60,7 +60,7 @@ object Implementation extends Template {
     case (NumV(a), NumV(b)) => (a == b)
     case (BoolV(a), BoolV(b)) => (a == b)
     case (NoneV, NoneV) => true
-    case (SomeV(a), SomeV(a)) => eqv(a, b)
+    case (SomeV(a), SomeV(b)) => eqv(a, b)
     case (ListV(a), ListV(b)) => a.length == b.length && a.lazyZip(b).forall { case (x, y) => eqv(x, y) }
     case (TupleV(a), TupleV(b)) => a.length == b.length && a.lazyZip(b).forall { case (x, y) => eqv(x, y) }
     case _ => false
@@ -71,8 +71,8 @@ object Implementation extends Template {
   private def tryExtend(env: Env, pat: Pattern, v: Value): Option[Env] = (pat, v) match {
     case (PNum(a), NumV(b)) if (a == b) => Some(env)
     case (PBool(a), BoolV(b)) if (a == b) => Some(env)
-    case (PId(a), b) => Some(env + (x -> b))
-    case (PNil(a), ListV(Nil)) => Some(env)
+    case (PId(a), b) => Some(env + (a -> b))
+    case (PNil, ListV(Nil)) => Some(env)
 
     // Cons는 리스트를 하나씩 쌓아 만드는 연산, x :: xs는 xs앞에 x를 붙이는 연산
     // ph는 단일 원소 가리키는 PId, pt는 나머지 리스트 패턴 가리키는 PId, h는 실제 head, t는 실제 tail
@@ -102,8 +102,9 @@ object Implementation extends Template {
 
   // 값이 반드시 필요해 None이 아니라 error를 리턴해야 하는 곳에서 사용하는 extend
   private def extendOrError(env: Env, pat: Pattern, v: Value): Env = 
-    tryExtend(env, pat, v).getOrElse(error(E_INV_OP))
+    tryExtend(env, pat, v).getOrElse(error(E_INV_PM))
 
+  // expr을 env에서 interpret
   def interp(expr: Expr, env: Env): Value = expr match {
 
     case ENum(n) => NumV(n)
@@ -111,7 +112,7 @@ object Implementation extends Template {
     case EId(a) => env.getOrElse(a, error(E_FREE_ID))
     
     case ENeg(a) => 
-      NumV(asNum(interp(a, env)))
+      NumV(-asNum(interp(a, env)))
     
     case EAdd(l, r) => 
       NumV(asNum(interp(l, env)) + asNum(interp(r, env)))
@@ -151,11 +152,53 @@ object Implementation extends Template {
 
     case ESome(v) => SomeV(interp(v, env))
 
+    // pattern: Pattern, value: Expr, scope: Expr
+    // let (x, y) = (1, 2) in x + y
     case ELet(p, v, s) => 
-      val v1 = interp(v, env)
-      val env2 = extendOrError(env, p, v1)
+      val v1 = interp(v, env) // 현재 환경에서 v를 평가
+      val env2 = extendOrError(env, p, v1)  // env에 p -> v1 을 추가해 확장
+      interp(s, env2) // 확장된 환경에서 s를 평가
+
+    // 재귀가 포함된 함수 실행, 함수가 상호 참조.
+    // funs: List[NamedFun], scope: Expr
+    case ERec(funs, scope) => 
+      lazy val recEnv: Env = {
+        funs.foldLeft(env) {
+          case (acc, NamedFun(name, param, fbody)) => 
+            acc + (name -> CloV(param, fbody, () => recEnv))  // 지연 참조하면서 환경 추가. 
+        }
+      } 
+      interp(scope, recEnv)
 
 
+    // 함수를 저장
+    // param: Pattern, body: Expr
+    // 재귀가 아니지만
+    case EFun(p, b) => 
+      CloV(p, b, () => env) 
+
+    // 함수를 실행
+    // fun: Expr, args: Expr
+    case EApp(fun, args) => 
+      val f = interp(fun, env)
+      val a = interp(args, env)
+      val (param, body, envThunk) = asClo(f)
+      val env2 = extendOrError(envThunk(), param, a)
+      interp(body, env2)
+
+    // 패턴 매칭
+    // value: Expr, cases: List[Case]
+    case EMatch(value, cases) => 
+      val v = interp(value, env)  // 일단 value부터 평가하기
+      def loop(cs: List[Case]): Value = cs match {  // Case들을 순서대로 하나씩 검사. 
+        case Nil => error(E_UNMATCHED)  // 더 이상 검사할 패턴이 없음
+        case Case(pattern, body) :: rest =>  // 가장 앞 Case 꺼내기
+          tryExtend(env, pattern, v) match {  // Pattern p가 Value V에 매칭되면 새로운 환경 env 돌려주기. 
+            case Some(env2) => interp(body, env2)  // 새로운 환경에서 body평가
+            case None => loop(rest)
+          }
+      }
+      loop(cases)
   }
     
 

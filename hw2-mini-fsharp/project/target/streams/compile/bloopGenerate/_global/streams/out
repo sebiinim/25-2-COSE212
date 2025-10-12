@@ -1,4 +1,4 @@
-[debug] [hw2-mini-fsharp-build] Classpath dependencies List()
-[debug] [hw2-mini-fsharp-build] Dependencies from configurations List()
-[debug] Bloop wrote the configuration of project 'hw2-mini-fsharp-build' to 'D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\project\.bloop\hw2-mini-fsharp-build.json'
-[success] Generated .bloop\hw2-mini-fsharp-build.json
+[0m[[0m[0mdebug[0m] [0m[0m[hw2-mini-fsharp-build] Classpath dependencies List()[0m
+[0m[[0m[0mdebug[0m] [0m[0m[hw2-mini-fsharp-build] Dependencies from configurations List()[0m
+[0m[[0m[0mdebug[0m] [0m[0mBloop wrote the configuration of project 'hw2-mini-fsharp-build' to 'D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\project\.bloop\hw2-mini-fsharp-build.json'[0m
+[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop\hw2-mini-fsharp-build.json[0m
