@@ -598,3 +598,294 @@
 2025.10.13 00:00:25 INFO  java.lang.StringIndexOutOfBoundsException: Range [5081, 5081 + -2) out of bounds for length 5349 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-00-25-874.md")
 2025.10.13 00:01:30 INFO  compiling hw2-mini-fsharp (4 scala sources)
 2025.10.13 00:01:30 INFO  time: compiled hw2-mini-fsharp in 81ms
+2025.10.13 00:02:01 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:02:01 INFO  java.lang.StringIndexOutOfBoundsException: Range [5160, 5160 + -2) out of bounds for length 5413 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-02-01-717.md")
+2025.10.13 00:02:02 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:02:02 INFO  java.lang.StringIndexOutOfBoundsException: Range [5160, 5160 + -2) out of bounds for length 5415 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-02-02-922.md")
+2025.10.13 00:02:33 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:02:33 INFO  time: compiled hw2-mini-fsharp in 82ms
+10월 13, 2025 12:03:25 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 16431
+10월 13, 2025 12:03:25 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 16444
+2025.10.13 00:05:40 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:05:40 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-05-40-266.md")
+2025.10.13 00:05:40 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:05:40 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-05-40-552.md")
+10월 13, 2025 12:06:28 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 17048
+2025.10.13 00:07:01 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:07:01 INFO  java.lang.StringIndexOutOfBoundsException: Range [5304, 5304 + -2) out of bounds for length 5557 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-07-01-558.md")
+2025.10.13 00:07:06 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:07:06 INFO  java.lang.StringIndexOutOfBoundsException: Range [5304, 5304 + -2) out of bounds for length 5557 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-07-06-800.md")
+2025.10.13 00:07:06 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:07:06 INFO  java.lang.StringIndexOutOfBoundsException: Range [5304, 5304 + -2) out of bounds for length 5562 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-07-07-642.md")
+2025.10.13 00:07:08 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:07:08 INFO  java.lang.StringIndexOutOfBoundsException: Range [5304, 5304 + -2) out of bounds for length 5556 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-07-08-532.md")
+2025.10.13 00:07:22 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:07:22 INFO  java.lang.StringIndexOutOfBoundsException: Range [5336, 5336 + -2) out of bounds for length 5589 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-07-22-686.md")
+2025.10.13 00:07:22 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:07:22 INFO  java.lang.StringIndexOutOfBoundsException: Range [5336, 5336 + -2) out of bounds for length 5595 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-07-23-533.md")
+2025.10.13 00:07:23 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:07:23 INFO  java.lang.StringIndexOutOfBoundsException: Range [5336, 5336 + -2) out of bounds for length 5590 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-07-23-845.md")
+2025.10.13 00:08:38 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:08:38 INFO  java.lang.StringIndexOutOfBoundsException: Range [5391, 5391 + -2) out of bounds for length 5643 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-08-38-128.md")
+2025.10.13 00:08:44 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:08:44 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-08-44-520.md")
+2025.10.13 00:09:14 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:09:14 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-09-14-719.md")
+2025.10.13 00:10:37 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:10:37 INFO  java.lang.StringIndexOutOfBoundsException: Range [5418, 5418 + -2) out of bounds for length 5680 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-10-37-488.md")
+10월 13, 2025 12:10:53 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 17795
+2025.10.13 00:11:00 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:11:00 INFO  java.lang.StringIndexOutOfBoundsException: Range [5418, 5418 + -2) out of bounds for length 5680 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-11-00-820.md")
+2025.10.13 00:11:02 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:11:02 INFO  java.lang.StringIndexOutOfBoundsException: Range [5418, 5418 + -2) out of bounds for length 5690 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-11-02-900.md")
+2025.10.13 00:11:46 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:11:46 INFO  java.lang.StringIndexOutOfBoundsException: Range [5418, 5418 + -2) out of bounds for length 5697 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-11-46-144.md")
+2025.10.13 00:12:06 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:12:06 INFO  java.lang.StringIndexOutOfBoundsException: Range [5459, 5459 + -2) out of bounds for length 5714 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-12-06-776.md")
+2025.10.13 00:12:08 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:12:08 INFO  java.lang.StringIndexOutOfBoundsException: Range [5459, 5459 + -2) out of bounds for length 5720 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-12-08-374.md")
+2025.10.13 00:14:17 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:14:17 INFO  time: compiled hw2-mini-fsharp in 81ms
+2025.10.13 00:14:19 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:14:19 INFO  time: compiled hw2-mini-fsharp in 72ms
+10월 13, 2025 12:16:32 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 18773
+2025.10.13 00:16:57 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:16:57 INFO  time: compiled hw2-mini-fsharp in 80ms
+2025.10.13 00:17:14 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:17:14 INFO  java.lang.StringIndexOutOfBoundsException: Range [5445, 5445 + -2) out of bounds for length 5978 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-17-14-090.md")
+2025.10.13 00:17:16 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:17:16 INFO  java.lang.StringIndexOutOfBoundsException: Range [5445, 5445 + -2) out of bounds for length 5985 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-17-16-728.md")
+2025.10.13 00:17:25 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:17:25 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-17-25-680.md")
+2025.10.13 00:17:25 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:17:25 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:17:25 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-17-25-865.md")
+2025.10.13 00:17:25 INFO  time: compiled hw2-mini-fsharp in 0.1s
+10월 13, 2025 12:17:28 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 19042
+2025.10.13 00:17:56 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:17:56 INFO  java.lang.StringIndexOutOfBoundsException: Range [5797, 5797 + -2) out of bounds for length 6050 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-17-56-025.md")
+2025.10.13 00:17:58 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:17:58 INFO  java.lang.StringIndexOutOfBoundsException: Range [5797, 5797 + -2) out of bounds for length 6052 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-17-58-372.md")
+10월 13, 2025 12:18:25 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 19304
+something's wrong: no file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala in List[<error>]RangePosition(file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala, 5834, 5834, 5848)
+something's wrong: no file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala in List[<error>]RangePosition(file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala, 5834, 5834, 5841)
+2025.10.13 00:18:48 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/MiniFSharp.scala]
+2025.10.13 00:18:48 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-18-48-792.md")
+2025.10.13 00:18:49 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/MiniFSharp.scala]
+2025.10.13 00:18:49 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-18-49-150.md")
+2025.10.13 00:20:11 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:20:11 INFO  java.lang.StringIndexOutOfBoundsException: Range [5957, 5957 + -2) out of bounds for length 6227 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-20-11-515.md")
+2025.10.13 00:20:12 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:20:12 INFO  java.lang.StringIndexOutOfBoundsException: Range [5957, 5957 + -2) out of bounds for length 6223 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-20-12-783.md")
+2025.10.13 00:20:53 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:20:53 INFO  java.lang.StringIndexOutOfBoundsException: Range [6017, 6017 + -2) out of bounds for length 6292 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-20-53-969.md")
+2025.10.13 00:20:53 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:20:53 INFO  java.lang.StringIndexOutOfBoundsException: Range [6017, 6017 + -2) out of bounds for length 6295 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_compiler-error_(hw2-mini-fsharp)_00-20-54-363.md")
+2025.10.13 00:21:12 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:21:12 INFO  time: compiled hw2-mini-fsharp in 79ms
+Exception in thread "pool-6-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$onCompilerJobQueue$1(CompilerAccess.scala:207)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025.10.13 00:22:34 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:22:34 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-22-34-547.md")
+2025.10.13 00:22:34 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/MiniFSharp.scala]
+2025.10.13 00:22:34 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-22-34-768.md")
+2025.10.13 00:27:27 INFO  no build target found for D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\MiniFSharp.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 00:27:26 INFO  no build target found for D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\MiniFSharp.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 00:27:27 INFO  no build target found for D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\MiniFSharp.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 00:27:27 INFO  no build target found for D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\MiniFSharp.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 00:27:27 INFO  no build target found for D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\MiniFSharp.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 00:27:27 INFO  no build target found for D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\MiniFSharp.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 00:27:29 INFO  Running List(C:\Users\sebin\AppData\Local\Coursier\data\bin\scala-cli.BAT, bsp, --workspace, D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\.metals-scala-cli, --semantic-db-source-root, D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg, D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\MiniFSharp.scala)
+2025.10.13 00:27:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\.metals\bsp.trace.json or C:\Users\sebin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.13 00:27:31 INFO  Scala CLI: Checking https://github.com/coursier/jvm-index/raw/master/index.json
+2025.10.13 00:27:31 INFO  Scala CLI: Checked https://github.com/coursier/jvm-index/raw/master/index.json
+2025.10.13 00:27:31 INFO  Scala CLI: Downloading https://github.com/coursier/jvm-index/raw/master/index.json
+2025.10.13 00:27:35 INFO  Scala CLI: Downloaded https://github.com/coursier/jvm-index/raw/master/index.json
+2025.10.13 00:27:36 INFO  Scala CLI: Downloading https://repo1.maven.org/maven2/org/scala-lang/scala3-sbt-bridge/3.7.2/scala3-sbt-bridge-3.7.2.pom
+2025.10.13 00:27:36 INFO  Scala CLI: Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala3-sbt-bridge/3.7.2/scala3-sbt-bridge-3.7.2.pom
+2025.10.13 00:27:36 INFO  Scala CLI: Downloading https://repo1.maven.org/maven2/org/scala-lang/scala3-sbt-bridge/3.7.2/scala3-sbt-bridge-3.7.2.jar
+2025.10.13 00:27:36 INFO  Scala CLI: Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala3-sbt-bridge/3.7.2/scala3-sbt-bridge-3.7.2.jar
+2025.10.13 00:27:36 INFO  Scala CLI: Downloading https://repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.7.2/scala3-library_3-3.7.2-sources.jar
+2025.10.13 00:27:36 INFO  Scala CLI: Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16-sources.jar
+2025.10.13 00:27:36 INFO  Scala CLI: Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.7.2/scala3-library_3-3.7.2-sources.jar
+2025.10.13 00:27:37 INFO  no build target found for D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\MiniFSharp.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 00:27:37 WARN  no build target for: D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\MiniFSharp.scala
+2025.10.13 00:27:37 INFO  no build target found for D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\MiniFSharp.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 00:27:37 INFO  Scala CLI: Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16-sources.jar
+2025.10.13 00:27:37 INFO  Scala CLI: Downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.10.0/semanticdb-javac-0.10.0.pom
+2025.10.13 00:27:37 INFO  Scala CLI: Downloaded https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.10.0/semanticdb-javac-0.10.0.pom
+2025.10.13 00:27:37 INFO  Scala CLI: Downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.10.0/semanticdb-javac-0.10.0.jar
+2025.10.13 00:27:39 INFO  no build target found for D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\MiniFSharp.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 00:27:39 INFO  Scala CLI: Downloaded https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.10.0/semanticdb-javac-0.10.0.jar
+2025.10.13 00:27:40 INFO  Connected to Scala CLI server v1.8.5
+2025.10.13 00:27:40 INFO  compiling _8f1fa8cb83-4e2e53b925 (1 scala source)
+2025.10.13 00:27:41 INFO  time: code lens generation in 1.93s
+2025.10.13 00:27:45 INFO  time: indexed workspace in 5.26s
+2025.10.13 00:27:49 INFO  compiling _8f1fa8cb83-4e2e53b925 (1 scala source)
+2025.10.13 00:27:50 INFO  time: compiled _8f1fa8cb83-4e2e53b925 in 1.45s
+2025.10.13 00:27:50 INFO  compiling _8f1fa8cb83-4e2e53b925 (1 scala source)
+2025.10.13 00:27:52 INFO  time: compiled _8f1fa8cb83-4e2e53b925 in 1.25s
+2025.10.13 00:27:52 INFO  Scala CLI started for D:\coding\COSE212-plrg-hw\whereisproblem\mini-fsharp\src\main\scala\kuplrg\MiniFSharp.scala
+2025.10.13 00:30:31 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\project\project\project\metals.sbt. Using presentation compiler with project's scala-library version: 2.12.18
+2025.10.13 00:30:31 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\project\project\project\metals.sbt. Using presentation compiler with project's scala-library version: 2.12.18
+2025.10.13 00:30:31 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\project\project\project\metals.sbt. Using presentation compiler with project's scala-library version: 2.12.18
+2025.10.13 00:30:31 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\project\project\project\metals.sbt
+2025.10.13 00:30:32 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\project\project\project\metals.sbt. Using presentation compiler with project's scala-library version: 2.12.18
+2025.10.13 00:31:03 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\project\project\project\metals.sbt. Using presentation compiler with project's scala-library version: 2.12.18
+2025.10.13 00:32:42 INFO  Shut down connection with build server.
+2025.10.13 00:32:42 INFO  Scala CLI: Oct 13, 2025 12:32:42 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+10월 13, 2025 12:33:48 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 20446
+2025.10.13 00:33:54 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:33:54 INFO  time: compiled hw2-mini-fsharp in 0.83s
+2025.10.13 00:34:01 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:34:01 INFO  time: compiled hw2-mini-fsharp in 0.45s
+2025.10.13 00:34:46 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:34:46 INFO  time: compiled hw2-mini-fsharp in 0.28s
+2025.10.13 00:36:32 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:36:32 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-36-32-858.md")
+2025.10.13 00:38:18 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:38:18 INFO  time: compiled hw2-mini-fsharp in 0.22s
+2025.10.13 00:38:34 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:38:34 INFO  time: compiled hw2-mini-fsharp in 0.41s
+2025.10.13 00:47:53 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:47:53 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-47-53-262.md")
+2025.10.13 00:49:06 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:49:06 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-49-06-343.md")
+2025.10.13 00:49:06 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:49:06 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-49-06-472.md")
+2025.10.13 00:49:06 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:49:06 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-49-06-536.md")
+2025.10.13 00:49:06 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:49:06 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-49-06-676.md")
+2025.10.13 00:49:07 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:49:07 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-49-07-356.md")
+2025.10.13 00:51:39 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/MiniFSharp.scala]
+2025.10.13 00:51:39 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-51-39-093.md")
+2025.10.13 00:52:40 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:52:40 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-52-40-818.md")
+2025.10.13 00:52:40 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:52:40 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-52-40-840.md")
+2025.10.13 00:52:40 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:52:40 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-52-40-853.md")
+2025.10.13 00:52:40 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:52:40 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-52-41-150.md")
+2025.10.13 00:52:40 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:52:40 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-52-41-171.md")
+2025.10.13 00:54:56 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:54:56 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-54-56-879.md")
+2025.10.13 00:54:57 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:54:57 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-54-57-312.md")
+2025.10.13 00:55:10 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:55:10 INFO  time: compiled hw2-mini-fsharp in 0.15s
+2025.10.13 00:55:40 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:55:40 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-55-40-208.md")
+2025.10.13 00:55:44 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/MiniFSharp.scala]
+2025.10.13 00:55:44 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-55-44-628.md")
+2025.10.13 00:55:44 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/MiniFSharp.scala]
+2025.10.13 00:55:44 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-55-44-678.md")
+2025.10.13 00:55:47 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/MiniFSharp.scala]
+2025.10.13 00:55:47 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-55-47-696.md")
+2025.10.13 00:55:50 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:55:50 INFO  time: compiled hw2-mini-fsharp in 0.15s
+2025.10.13 00:56:04 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:56:04 INFO  time: compiled hw2-mini-fsharp in 0.25s
+2025.10.13 00:56:40 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:56:40 INFO  time: compiled hw2-mini-fsharp in 0.32s
+2025.10.13 00:57:06 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:57:06 INFO  time: compiled hw2-mini-fsharp in 0.15s
+2025.10.13 00:57:21 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:57:21 INFO  time: compiled hw2-mini-fsharp in 0.17s
+2025.10.13 00:59:45 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 00:59:45 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_00-59-45-651.md")
+2025.10.13 00:59:47 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 00:59:47 INFO  time: compiled hw2-mini-fsharp in 0.16s
+2025.10.13 01:06:25 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:06:25 INFO  time: compiled hw2-mini-fsharp in 0.14s
+2025.10.13 01:06:27 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 01:06:27 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_01-06-27-515.md")
+Exception in thread "pool-6-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$onCompilerJobQueue$1(CompilerAccess.scala:207)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025.10.13 01:09:57 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 01:09:57 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_01-09-57-944.md")
+2025.10.13 01:10:11 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/MiniFSharp.scala]
+2025.10.13 01:10:11 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_01-10-11-979.md")
+2025.10.13 01:10:12 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/MiniFSharp.scala]
+2025.10.13 01:10:12 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_01-10-12-282.md")
+2025.10.13 01:10:16 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:10:16 INFO  time: compiled hw2-mini-fsharp in 0.14s
+2025.10.13 01:10:50 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:10:50 INFO  time: compiled hw2-mini-fsharp in 0.13s
+2025.10.13 01:21:30 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:21:30 INFO  time: compiled hw2-mini-fsharp in 0.11s
+2025.10.13 01:21:34 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:21:34 INFO  time: compiled hw2-mini-fsharp in 0.2s
+2025.10.13 01:22:22 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:22:22 INFO  time: compiled hw2-mini-fsharp in 0.19s
+10월 13, 2025 1:22:28 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 22494
+2025.10.13 01:22:28 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 01:22:28 INFO  empty definition using pc, found symbol in pc: kuplrg/Case# (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_01-22-28-193.md")
+2025.10.13 01:24:33 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:24:33 INFO  time: compiled hw2-mini-fsharp in 77ms
+2025.10.13 01:27:30 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:27:30 INFO  time: compiled hw2-mini-fsharp in 72ms
+2025.10.13 01:28:58 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:28:58 INFO  time: compiled hw2-mini-fsharp in 80ms
+10월 13, 2025 1:29:26 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 22824
+2025.10.13 01:29:27 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:29:27 INFO  time: compiled hw2-mini-fsharp in 0.24s
+2025.10.13 01:30:01 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:30:01 INFO  time: compiled hw2-mini-fsharp in 86ms
+2025.10.13 01:30:32 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:30:32 INFO  time: compiled hw2-mini-fsharp in 76ms
+2025.10.13 01:30:43 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 01:30:43 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_01-30-43-612.md")
+2025.10.13 01:30:45 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/MiniFSharp.scala]
+2025.10.13 01:30:45 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_01-30-45-610.md")
+2025.10.13 01:30:45 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/MiniFSharp.scala]
+2025.10.13 01:30:45 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_01-30-45-920.md")
+10월 13, 2025 1:32:28 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 23383
+2025.10.13 01:32:32 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:32:32 INFO  time: compiled hw2-mini-fsharp in 78ms
+2025.10.13 01:32:46 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:32:46 INFO  time: compiled hw2-mini-fsharp in 80ms
+2025.10.13 01:32:57 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:32:57 INFO  time: compiled hw2-mini-fsharp in 73ms
+2025.10.13 01:33:58 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:33:58 INFO  time: compiled hw2-mini-fsharp in 0.12s
+10월 13, 2025 1:35:12 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 23699
+2025.10.13 01:36:00 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:36:00 INFO  time: compiled hw2-mini-fsharp in 76ms
+2025.10.13 01:37:52 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.13 01:37:52 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp)_01-37-52-321.md")
+2025.10.13 01:38:01 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:38:01 INFO  time: compiled hw2-mini-fsharp in 65ms
+2025.10.13 01:38:12 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:38:12 INFO  time: compiled hw2-mini-fsharp in 82ms
+2025.10.13 01:39:49 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:39:49 INFO  time: compiled hw2-mini-fsharp in 77ms
+2025.10.13 01:44:47 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:44:47 INFO  time: compiled hw2-mini-fsharp in 98ms
+10월 13, 2025 1:54:49 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 24206

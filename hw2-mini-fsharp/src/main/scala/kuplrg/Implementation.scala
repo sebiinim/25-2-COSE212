@@ -206,5 +206,32 @@ object Implementation extends Template {
   // ---------------------------------------------------------------------------
   // Problem #2
   // ---------------------------------------------------------------------------
-  def hanoiMovesBody: String = ???
+
+  // 하노이는 2*이전 값 + 1 구조
+  // moves(n, s, t, m) = moves(n-1, s, m, t) ++ [(s, t)] ++ moves(n-1, m, t, s) 라는 기본 구조 이용
+  // n: 원판 개수, Source, Target, temp
+
+  // n: Int, source: Int, temp: Int, target: Int
+  // let hanoiMoves n source temp target = $hanoiMovesBody in
+  // hanoiMoves $n $source $temp $target
+  def hanoiMovesBody: String =
+  """
+  let rec append xs ys =
+    match xs with
+    | [] -> ys
+    | h :: t -> h :: (append t ys)
+  in
+  let rec aux n source temp target =
+    if n = 0 then []
+    else
+      append
+        (aux (n - 1) source target temp)
+        ((source, target) :: (aux (n - 1) temp source target))
+  in
+  aux n source temp target
+  """
+
+  // append 함수 정의하기, xs와 ys를 붙인다. xs가 비어 있으면 ys반환, xs가 들어 있으면 head만 빼면서 재귀적으로 붙인다.
+  // aux라는 보조 재귀 함수 정의. n = 0 이면 바로 끝이니까 Nil
+  // 아니면 n-1개를 temp로 옮기기, 가장 큰 걸 target으로 옮기기, n-1개를 다시 target으로 옮기기 이걸 반복하면 된다. 
 }

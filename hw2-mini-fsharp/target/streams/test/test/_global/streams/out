@@ -221,14 +221,12 @@
 [0m[[0m[0minfo[0m] [0m[0m[32meval(expr20)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should be "(Some [[5; 7; 8; 2; 3; 4; 6; 1; 9]; [4; 3; 2; 6; 1; 9; 8; 7; 5]; [9;  ...[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mafterAllPass(eval(hanoiMovesExpr(3, 0, 1, 2)))[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- should be "[(0, 2); (0, 1); (2, 1); (0, 2); (1, 0); (1, 2); (0, 2)]" *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  Please implement `hanoiMovesBody` (Implementation.scala:209). (SpecBase.scala:146)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be "[(0, 2); (0, 1); (2, 1); (0, 2); (1, 0); (1, 2); (0, 2)]"[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 109 events.[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 985 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 2 seconds, 107 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 109[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 108, failed 1, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
-[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
-[0m[[0m[31merror[0m] [0m[0m	kuplrg.Spec[0m
-[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 109, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	kuplrg.Spec[0m
