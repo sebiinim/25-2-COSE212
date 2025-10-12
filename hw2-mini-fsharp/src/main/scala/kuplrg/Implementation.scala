@@ -17,6 +17,8 @@ object Implementation extends Template {
   private val E_UNMATCHED = "unmatched value"
 
   // Value: NumV, Boolv, ListV, TupleV, NoneV, SomeV, CloV
+
+  // Value를 실제 값으로 바꾸기
   private def asNum(v: Value): BigInt = v match {
     case NumV(n) => n
     case _ => error(E_INV_OP)
@@ -53,6 +55,7 @@ object Implementation extends Template {
   }
 
 
+  // equality 검사
   private def eqv(v1: Value, v2: Value): Boolean = (v1, v2) match {
     case (NumV(a), NumV(b)) => (a == b)
     case (BoolV(a), BoolV(b)) => (a == b)
@@ -64,13 +67,96 @@ object Implementation extends Template {
   }
 
   // 패턴 매칭으로 환경 확장, PNum, PBool, PId, PNil, PCons, PTuple, PNone, PSome
+  // Pattern과 Value를 주면 확장된 Env 또는 None을 제공.
   private def tryExtend(env: Env, pat: Pattern, v: Value): Option[Env] = (pat, v) match {
     case (PNum(a), NumV(b)) if (a == b) => Some(env)
     case (PBool(a), BoolV(b)) if (a == b) => Some(env)
-    case (PId(a), )
+    case (PId(a), b) => Some(env + (x -> b))
+    case (PNil(a), ListV(Nil)) => Some(env)
+
+    // Cons는 리스트를 하나씩 쌓아 만드는 연산, x :: xs는 xs앞에 x를 붙이는 연산
+    // ph는 단일 원소 가리키는 PId, pt는 나머지 리스트 패턴 가리키는 PId, h는 실제 head, t는 실제 tail
+    case (PCons(ph, pt), ListV(h :: t)) => 
+      for {
+        e1 <- tryExtend(env, ph, h)
+        e2 <- tryExtend(e1, pt, ListV(t)) // e1이라는 env에서 tail부분 패턴매칭
+      } yield e2
+    // for ~ yield 문법, 안에 있는 모든 요소가 성공하면 yield를 리턴, 하나라도 실패하면 None을 리턴. 
+    
+    case (PTuple(a), TupleV(b)) if (a.length == b.length) => 
+      a.zip(b).foldLeft(Option(env)) {
+        case (acc, (p, v)) => acc.flatMap(tryExtend(_, p, v)) 
+        // acc는 현재까지 누적된 env, (p, v)는 현재 (패턴, 값)
+        // flatMap은 acc에 있는 값을 꺼내서 _ 에 넣고 함수를 실행한 후 그 함수가 반환하는 값을 리턴.
+        // 여기서는 acc(Env)를 _ 에 넣고 tryExtend(acc, p, v)를 실행, 그 결과(Option)을 리턴. 
+        // 이걸 a.zip(b)로 만든 리스트의 모든 원소에 대해 반복. 중간에 오류나면 None 리턴. 
+      }
+
+    // None과 Some은 둘 다 Option의 일부. null보다 안전하게 없을 수도 있는 값을 표현. 
+    case (PNone, NoneV) => Some(env)
+    case (PSome(a), SomeV(b)) => tryExtend(env, a, b)  
+
+    // 그 외 매칭 실패
+    case _ => None
   }
 
-  def interp(expr: Expr, env: Env): Value = ???
+  // 값이 반드시 필요해 None이 아니라 error를 리턴해야 하는 곳에서 사용하는 extend
+  private def extendOrError(env: Env, pat: Pattern, v: Value): Env = 
+    tryExtend(env, pat, v).getOrElse(error(E_INV_OP))
+
+  def interp(expr: Expr, env: Env): Value = expr match {
+
+    case ENum(n) => NumV(n)
+    case EBool(b) => BoolV(b)
+    case EId(a) => env.getOrElse(a, error(E_FREE_ID))
+    
+    case ENeg(a) => 
+      NumV(asNum(interp(a, env)))
+    
+    case EAdd(l, r) => 
+      NumV(asNum(interp(l, env)) + asNum(interp(r, env)))
+
+    case EMul(l, r) => 
+      NumV(asNum(interp(l, env)) * asNum(interp(r, env)))
+    
+    case EDiv(l, r) => 
+      val n1 = asNum(interp(l, env)); val n2 = asNum(interp(r, env))
+      if (n2 == 0) error(E_INV_OP) else NumV(n1 / n2)
+    
+    case EMod(l, r) => 
+      val n1 = asNum(interp(l, env)); val n2 = asNum(interp(r, env))
+      if (n2 == 0) error(E_INV_OP) else NumV(n1 % n2)
+
+    case EEq(l, r) => 
+      BoolV(eqv(interp(l, env), interp(r, env)))
+
+    case ELt(l, r) => 
+      BoolV(asNum(interp(l, env)) < asNum(interp(r, env)))
+
+    case EIf(c, t, e) => 
+      if (asBool(interp(c, env))) interp(t, env) else interp(e, env)
+
+    case ENil => ListV(Nil)
+
+    case ECons(h, t) => 
+      val vh = interp(h, env)
+      val vt = interp(t, env)
+      val lst = asList(vt)
+      ListV(vh :: lst)
+
+    case ETuple(e) => 
+     TupleV(e.map(interp(_, env)))
+
+    case ENone => NoneV
+
+    case ESome(v) => SomeV(interp(v, env))
+
+    case ELet(p, v, s) => 
+      val v1 = interp(v, env)
+      val env2 = extendOrError(env, p, v1)
+
+
+  }
     
 
 

@@ -184,3 +184,259 @@
 2025.10.12 22:14:04 INFO  Shutting down server
 2025.10.12 22:14:04 INFO  shutting down Metals
 2025.10.12 22:14:04 INFO  Exiting server
+2025.10.12 22:15:53 INFO  Started: Metals version 1.6.2 in folders 'D:\coding\COSE212-plrg-hw\hw2-mini-fsharp' for client Visual Studio Code 1.105.0.
+2025.10.12 22:15:55 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.12 22:15:55 INFO  Attempting to connect to the build server...
+2025.10.12 22:15:55 INFO  No running Bloop server found, starting one.
+2025.10.12 22:15:57 INFO  Starting compilation server
+2025.10.12 22:15:59 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\bsp.trace.json or C:\Users\sebin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.12 22:16:00 INFO  Attempting to connect to the build server...
+2025.10.12 22:16:00 INFO  Found a Bloop server running
+2025.10.12 22:16:00 INFO  Attempting to connect to the build server...
+2025.10.12 22:16:00 INFO  Found a Bloop server running
+2025.10.12 22:15:59 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\project\project\.metals\bsp.trace.json or C:\Users\sebin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.12 22:16:00 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\project\.metals\bsp.trace.json or C:\Users\sebin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.12 22:16:00 INFO  time: Connected to build server in 4.34s
+2025.10.12 22:15:59 INFO  Connected to Build server: Bloop v2.0.13
+2025.10.12 22:15:59 INFO  time: Imported build in 0.31s
+10월 12, 2025 10:16:01 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+10월 12, 2025 10:16:01 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+10월 12, 2025 10:16:01 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+2025.10.12 22:16:10 INFO  time: indexed workspace in 9.63s
+2025.10.12 22:16:11 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 22:16:13 INFO  time: compiled hw2-mini-fsharp in 2.41s
+2025.10.12 22:18:27 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 22:18:27 INFO  time: compiled hw2-mini-fsharp in 0.52s
+10월 12, 2025 10:22:13 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 121
+10월 12, 2025 10:22:33 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 255
+10월 12, 2025 10:22:33 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 256
+10월 12, 2025 10:22:33 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 258
+10월 12, 2025 10:22:33 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 260
+10월 12, 2025 10:22:33 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 262
+10월 12, 2025 10:26:42 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 778
+10월 12, 2025 10:32:01 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 1260
+10월 12, 2025 10:33:36 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 1694
+2025.10.12 22:33:42 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 22:33:42 INFO  time: compiled hw2-mini-fsharp in 0.32s
+10월 12, 2025 10:36:23 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 2136
+10월 12, 2025 10:38:40 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 2799
+10월 12, 2025 10:38:43 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 2831
+10월 12, 2025 10:40:09 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 3266
+10월 12, 2025 10:40:24 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 3406
+2025.10.12 22:40:28 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 22:40:28 INFO  time: compiled hw2-mini-fsharp in 0.3s
+10월 12, 2025 10:42:55 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 3538
+10월 12, 2025 10:43:13 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 3633
+10월 12, 2025 10:43:17 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 3670
+10월 12, 2025 10:43:26 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 3722
+10월 12, 2025 10:43:30 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 3750
+10월 12, 2025 10:51:02 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 3827
+2025.10.12 22:51:17 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 22:51:17 INFO  time: compiled hw2-mini-fsharp in 0.15s
+2025.10.12 22:51:23 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 22:51:23 INFO  time: compiled hw2-mini-fsharp in 0.14s
+10월 12, 2025 10:52:34 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4229
+2025.10.12 22:52:35 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 22:52:35 INFO  time: compiled hw2-mini-fsharp in 0.14s
+10월 12, 2025 10:52:40 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4289
+10월 12, 2025 10:52:41 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4295
+10월 12, 2025 10:52:45 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4348
+2025.10.12 22:52:47 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 22:52:47 INFO  time: compiled hw2-mini-fsharp in 0.11s
+10월 12, 2025 10:53:01 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4381
+2025.10.12 22:53:26 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 22:53:26 INFO  time: compiled hw2-mini-fsharp in 0.13s
+10월 12, 2025 10:55:25 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4535
+10월 12, 2025 10:57:15 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4609
+10월 12, 2025 10:58:17 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4808
+10월 12, 2025 10:59:29 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 5032
+10월 12, 2025 10:59:34 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 5091
+2025.10.12 22:59:38 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 22:59:38 INFO  time: compiled hw2-mini-fsharp in 0.24s
+10월 12, 2025 11:12:10 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 5360
+10월 12, 2025 11:12:20 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 5493
+10월 12, 2025 11:12:25 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 5517
+10월 12, 2025 11:12:33 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 5571
+10월 12, 2025 11:12:35 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 5604
+10월 12, 2025 11:12:38 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 5630
+10월 12, 2025 11:12:39 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 5643
+2025.10.12 23:12:43 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:12:43 INFO  time: compiled hw2-mini-fsharp in 0.12s
+10월 12, 2025 11:12:49 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 5716
+10월 12, 2025 11:12:51 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 5755
+2025.10.12 23:13:07 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:13:07 INFO  time: compiled hw2-mini-fsharp in 98ms
+10월 12, 2025 11:13:28 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 5994
+2025.10.12 23:14:22 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:14:22 INFO  java.lang.StringIndexOutOfBoundsException: Range [3342, 3342 + -2) out of bounds for length 3649 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-14-22-830.md")
+2025.10.12 23:14:22 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:14:22 INFO  java.lang.StringIndexOutOfBoundsException: Range [3342, 3342 + -2) out of bounds for length 3654 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-14-23-110.md")
+2025.10.12 23:14:24 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:14:24 INFO  java.lang.StringIndexOutOfBoundsException: Range [3342, 3342 + -2) out of bounds for length 3657 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-14-24-347.md")
+2025.10.12 23:14:24 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:14:24 INFO  java.lang.StringIndexOutOfBoundsException: Range [3342, 3342 + -2) out of bounds for length 3650 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-14-24-553.md")
+2025.10.12 23:14:29 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:14:29 INFO  time: compiled hw2-mini-fsharp in 0.12s
+2025.10.12 23:14:47 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:14:47 INFO  time: compiled hw2-mini-fsharp in 0.11s
+10월 12, 2025 11:16:19 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 6579
+10월 12, 2025 11:16:26 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 6639
+2025.10.12 23:16:29 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:16:29 INFO  time: compiled hw2-mini-fsharp in 80ms
+10월 12, 2025 11:16:33 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 6692
+10월 12, 2025 11:16:37 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 6750
+10월 12, 2025 11:16:38 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 6754
+2025.10.12 23:16:41 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:16:41 INFO  time: compiled hw2-mini-fsharp in 0.11s
+10월 12, 2025 11:16:44 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 6831
+10월 12, 2025 11:16:54 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 6931
+10월 12, 2025 11:16:54 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 6937
+10월 12, 2025 11:16:56 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 6961
+2025.10.12 23:16:56 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:16:56 INFO  time: compiled hw2-mini-fsharp in 76ms
+10월 12, 2025 11:17:28 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 7059
+10월 12, 2025 11:17:28 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 7063
+2025.10.12 23:17:46 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:17:46 INFO  java.lang.StringIndexOutOfBoundsException: Range [3553, 3553 + -2) out of bounds for length 3853 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-17-46-869.md")
+2025.10.12 23:17:48 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:17:48 INFO  java.lang.StringIndexOutOfBoundsException: Range [3553, 3553 + -2) out of bounds for length 3858 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-17-48-213.md")
+2025.10.12 23:17:48 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:17:48 INFO  java.lang.StringIndexOutOfBoundsException: Range [3553, 3553 + -2) out of bounds for length 3856 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-17-48-939.md")
+2025.10.12 23:18:07 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:18:07 INFO  time: compiled hw2-mini-fsharp in 84ms
+10월 12, 2025 11:18:18 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 7625
+10월 12, 2025 11:18:26 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 7716
+10월 12, 2025 11:18:26 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 7719
+10월 12, 2025 11:18:26 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 7726
+2025.10.12 23:18:30 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:18:30 INFO  time: compiled hw2-mini-fsharp in 0.12s
+2025.10.12 23:21:50 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:21:50 INFO  time: compiled hw2-mini-fsharp in 93ms
+10월 12, 2025 11:22:32 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 8212
+2025.10.12 23:23:07 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:23:07 INFO  time: compiled hw2-mini-fsharp in 72ms
+2025.10.12 23:24:25 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:24:25 INFO  java.lang.StringIndexOutOfBoundsException: Range [3881, 3881 + -2) out of bounds for length 4137 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-24-25-442.md")
+2025.10.12 23:24:28 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:24:28 INFO  java.lang.StringIndexOutOfBoundsException: Range [3887, 3887 + -2) out of bounds for length 4145 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-24-28-554.md")
+2025.10.12 23:24:29 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:24:29 INFO  java.lang.StringIndexOutOfBoundsException: Range [3887, 3887 + -2) out of bounds for length 4150 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-24-29-654.md")
+2025.10.12 23:24:58 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:24:58 INFO  java.lang.StringIndexOutOfBoundsException: Range [3887, 3887 + -2) out of bounds for length 4148 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-24-58-865.md")
+2025.10.12 23:25:04 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:25:04 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_empty-definition_(hw2-mini-fsharp)_23-25-04-114.md")
+2025.10.12 23:25:22 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:25:22 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_empty-definition_(hw2-mini-fsharp)_23-25-22-925.md")
+2025.10.12 23:25:23 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:25:23 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_empty-definition_(hw2-mini-fsharp)_23-25-23-270.md")
+2025.10.12 23:25:23 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:25:23 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_empty-definition_(hw2-mini-fsharp)_23-25-23-593.md")
+2025.10.12 23:25:42 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:25:42 INFO  time: compiled hw2-mini-fsharp in 90ms
+10월 12, 2025 11:26:12 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 9129
+2025.10.12 23:26:55 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:26:55 INFO  time: compiled hw2-mini-fsharp in 0.1s
+2025.10.12 23:26:56 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:26:56 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_empty-definition_(hw2-mini-fsharp)_23-26-56-052.md")
+10월 12, 2025 11:27:43 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 9652
+2025.10.12 23:27:58 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:27:58 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_empty-definition_(hw2-mini-fsharp)_23-27-58-322.md")
+2025.10.12 23:27:58 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:27:58 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_empty-definition_(hw2-mini-fsharp)_23-27-58-451.md")
+2025.10.12 23:27:58 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:27:58 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_empty-definition_(hw2-mini-fsharp)_23-27-58-692.md")
+10월 12, 2025 11:27:58 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 9723
+2025.10.12 23:27:59 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:27:59 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_empty-definition_(hw2-mini-fsharp)_23-27-59-052.md")
+2025.10.12 23:27:58 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:27:58 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_empty-definition_(hw2-mini-fsharp)_23-27-59-260.md")
+10월 12, 2025 11:28:55 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 9958
+10월 12, 2025 11:28:55 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 9959
+10월 12, 2025 11:28:55 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 9963
+10월 12, 2025 11:28:56 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 9983
+10월 12, 2025 11:41:48 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 10223
+2025.10.12 23:42:12 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:42:12 INFO  java.lang.StringIndexOutOfBoundsException: Range [4111, 4111 + -2) out of bounds for length 4382 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-42-12-330.md")
+2025.10.12 23:42:22 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:42:22 INFO  java.lang.StringIndexOutOfBoundsException: Range [4117, 4117 + -2) out of bounds for length 4390 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-42-22-883.md")
+2025.10.12 23:42:24 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:42:24 INFO  java.lang.StringIndexOutOfBoundsException: Range [4117, 4117 + -2) out of bounds for length 4393 (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_compiler-error_(hw2-mini-fsharp)_23-42-24-662.md")
+10월 12, 2025 11:42:30 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 10493
+10월 12, 2025 11:43:01 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 10700
+2025.10.12 23:43:05 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.12 23:43:05 INFO  time: compiled hw2-mini-fsharp in 0.12s
+10월 12, 2025 11:43:27 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 10783
+10월 12, 2025 11:43:29 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 10812
+2025.10.12 23:43:39 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala]
+2025.10.12 23:43:39 INFO  empty definition using pc, found symbol in pc:  (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-12\r_empty-definition_(hw2-mini-fsharp)_23-43-39-756.md")
