@@ -1,0 +1,138 @@
+error id: 715D768B5F64B349906F998001909419
+file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala
+### java.lang.StringIndexOutOfBoundsException: Range [1808, 1808 + -2) out of bounds for length 2105
+
+occurred in the presentation compiler.
+
+
+
+action parameters:
+offset: 1814
+uri: file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/main/scala/kuplrg/Implementation.scala
+text:
+```scala
+package kuplrg
+
+object Implementation extends Template {
+
+  import Expr.*, Value.*, Pattern.*
+
+  // ---------------------------------------------------------------------------
+  // Problem #1
+  // ---------------------------------------------------------------------------
+    // ---- 에러 메세지 상수 ----
+  private val E_FREE_ID   = "free identifier"
+  private val E_INV_OP    = "invalid operation"
+  private val E_NOT_FUN   = "not a function"
+  private val E_NOT_BOOL  = "not a boolean"
+  private val E_NOT_LIST  = "not a list"
+  private val E_INV_PM    = "invalid pattern match"
+  private val E_UNMATCHED = "unmatched value"
+
+  // Value: NumV, Boolv, ListV, TupleV, NoneV, SomeV, CloV
+  private def asNum(v: Value): BigInt = v match {
+    case NumV(n) => n
+    case _ => error(E_INV_OP)
+  }
+
+  private def asBool(v: Value): Boolean = v match {
+    case BoolV(b) => b
+    case _ => error(E_NOT_BOOL)
+  }
+
+  private def asList(v: Value): List[Value] = v match {
+    case ListV(xs) => xs
+    case _ => error(E_NOT_LIST)
+  }
+
+  private def asTuple(v: Value): List[Value] = v match {
+    case TupleV(vs) => vs
+    case _ => error(E_INV_OP)
+  }
+
+  private def asSome(v: Value): Value = v match {
+  case SomeV(inner) => inner
+  case _            => error(E_INV_PM)
+  }
+
+  private def asNone(v: Value): Unit = v match {
+  case NoneV => ()
+  case _     => error(E_INV_PM)
+  }
+
+  private def asClo(v: Value): (Pattern, Expr, () => Env) = v match {
+    case CloV(pat, body, envThunk) => (pat, body, envThunk)
+    case _ => error(E_NOT_FUN)
+  }
+
+
+  private def eqv(v1: Value, v2: Value): Boolean = (v1, v2) match {
+    case (NumV(a), NumV(b)) => (a == b)
+    case (BoolV(a), BoolV(b)) => (a == b)
+    case (NoneV, NoneV) => true
+    case (SomeV(a), SomeV(a)) => eqv(a, b@@)
+
+  }
+
+  def interp(expr: Expr, env: Env): Value = ???
+    
+
+
+  // ---------------------------------------------------------------------------
+  // Problem #2
+  // ---------------------------------------------------------------------------
+  def hanoiMovesBody: String = ???
+}
+
+```
+
+
+presentation compiler configuration:
+Scala version: 2.12.18
+Classpath:
+<WORKSPACE>\.bloop\hw2-mini-fsharp\bloop-bsp-clients-classes\classes-Metals-pMEm8GQQTCCY1nezT-fhkQ== [exists ], <HOME>\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\com\sourcegraph\semanticdb-javac\0.11.0\semanticdb-javac-0.11.0.jar [exists ], <WORKSPACE>\lib\warts.jar [exists ], <HOME>\.sbt\boot\scala-2.12.18\lib\scala-library.jar [exists ]
+Options:
+-Yrangepos -Xplugin-require:semanticdb
+
+
+
+
+#### Error stacktrace:
+
+```
+java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
+	java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
+	java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213)
+	java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210)
+	java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98)
+	java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromIndexSize(Preconditions.java:118)
+	java.base/jdk.internal.util.Preconditions.checkFromIndexSize(Preconditions.java:397)
+	java.base/java.lang.String.checkBoundsOffCount(String.java:4853)
+	java.base/java.lang.String.rangeCheck(String.java:307)
+	java.base/java.lang.String.<init>(String.java:303)
+	scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1231)
+	scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1254)
+	scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:453)
+	scala.Option.map(Option.scala:230)
+	scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:451)
+	scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:246)
+	scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:357)
+	scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:351)
+	scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:320)
+	scala.meta.internal.pc.SignatureHelpProvider.$anonfun$signatureHelp$3(SignatureHelpProvider.scala:31)
+	scala.Option.flatMap(Option.scala:271)
+	scala.meta.internal.pc.SignatureHelpProvider.$anonfun$signatureHelp$2(SignatureHelpProvider.scala:29)
+	scala.Option.flatMap(Option.scala:271)
+	scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:27)
+	scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$signatureHelp$1(ScalaPresentationCompiler.scala:439)
+	scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:148)
+	scala.meta.internal.pc.CompilerAccess.$anonfun$withNonInterruptableCompiler$1(CompilerAccess.scala:132)
+	scala.meta.internal.pc.CompilerAccess.$anonfun$onCompilerJobQueue$1(CompilerAccess.scala:209)
+	scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	java.base/java.lang.Thread.run(Thread.java:1583)
+```
+#### Short summary: 
+
+java.lang.StringIndexOutOfBoundsException: Range [1808, 1808 + -2) out of bounds for length 2105
