@@ -889,3 +889,45 @@ Exception in thread "pool-6-thread-2" java.lang.InterruptedException
 2025.10.13 01:44:47 INFO  time: compiled hw2-mini-fsharp in 98ms
 10월 13, 2025 1:54:49 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 경고: Unmatched cancel notification for request id 24206
+2025.10.13 01:55:34 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:55:34 INFO  time: compiled hw2-mini-fsharp in 0.47s
+2025.10.13 01:56:14 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:56:14 INFO  time: compiled hw2-mini-fsharp in 0.13s
+2025.10.13 01:56:14 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:56:14 INFO  time: compiled hw2-mini-fsharp in 0.11s
+10월 13, 2025 1:56:35 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 24405
+2025.10.13 01:56:41 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw2-mini-fsharp/src/test/scala/kuplrg/Spec.scala]
+2025.10.13 01:56:41 INFO  empty definition using pc, found symbol in pc: kuplrg/SpecBase# (full report at: "D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\.metals\.reports\metals-full\2025-10-13\r_empty-definition_(hw2-mini-fsharp-test)_01-56-41-112.md")
+2025.10.13 01:56:52 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:56:52 INFO  time: compiled hw2-mini-fsharp in 0.11s
+2025.10.13 01:58:37 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:58:37 INFO  time: compiled hw2-mini-fsharp in 93ms
+2025.10.13 01:59:23 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 01:59:23 INFO  time: compiled hw2-mini-fsharp in 95ms
+10월 13, 2025 2:01:23 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 25009
+10월 13, 2025 2:01:42 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 25152
+2025.10.13 02:01:54 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 02:01:54 INFO  time: compiled hw2-mini-fsharp in 79ms
+2025.10.13 02:02:02 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 02:02:02 INFO  time: compiled hw2-mini-fsharp in 86ms
+2025.10.13 02:02:05 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 02:02:05 INFO  time: compiled hw2-mini-fsharp in 74ms
+10월 13, 2025 2:03:05 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 25374
+2025.10.13 02:03:14 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 02:03:14 INFO  time: compiled hw2-mini-fsharp in 83ms
+10월 13, 2025 2:03:20 오전 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 25518
+2025.10.13 02:04:01 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 02:04:01 INFO  time: compiled hw2-mini-fsharp in 87ms
+2025.10.13 02:05:06 INFO  compiling hw2-mini-fsharp (4 scala sources)
+2025.10.13 02:05:06 INFO  time: compiled hw2-mini-fsharp in 0.1s
+2025.10.13 02:06:23 INFO  Shutting down server
+2025.10.13 02:06:23 INFO  shutting down Metals
+2025.10.13 02:06:23 INFO  Shut down connection with build server.
+2025.10.13 02:06:23 INFO  Shut down connection with build server.
+2025.10.13 02:06:23 INFO  Shut down connection with build server.
+2025.10.13 02:06:23 INFO  Exiting server

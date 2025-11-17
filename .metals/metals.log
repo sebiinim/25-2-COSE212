@@ -1,0 +1,193 @@
+2025.10.13 20:41:17 INFO  Started: Metals version 1.6.2 in folders 'D:\coding\COSE212-plrg-hw' for client Visual Studio Code 1.105.0.
+2025.10.13 20:41:18 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:41:21 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:41:22 INFO  Attempting to connect to the build server...
+2025.10.13 20:41:22 INFO  No running Bloop server found, starting one.
+2025.10.13 20:41:24 INFO  Starting compilation server
+2025.10.13 20:41:26 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\coding\COSE212-plrg-hw\.metals\bsp.trace.json or C:\Users\sebin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.13 20:41:26 INFO  time: Connected to build server in 4.63s
+2025.10.13 20:41:26 INFO  Connected to Build server: Bloop v2.0.13
+2025.10.13 20:41:27 INFO  Created report: Optional.empty
+2025.10.13 20:41:27 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.10.13 20:41:27 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.10.13 20:41:27 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.10.13 20:41:27 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.10.13 20:41:27 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.10.13 20:41:27 INFO  time: Imported build in 0.25s
+2025.10.13 20:41:30 INFO  time: indexed workspace in 3.32s
+2025.10.13 20:41:30 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala
+2025.10.13 20:41:30 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:41:30 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala
+2025.10.13 20:41:30 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:41:31 INFO  time: code lens generation in 1.38s
+2025.10.13 20:41:31 INFO  time: code lens generation in 1.2s
+2025.10.13 20:41:33 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:12 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:13 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:29 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:41 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:42 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:42 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:42 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:42 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:43 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:44 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:45 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:45 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:45 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:45 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:47 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:47 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:47 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:48 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:48 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:48 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:49 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:48 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:49 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:48 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:48 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:49 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:49 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:49 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:49 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:49 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:50 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:50 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:50 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:50 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:50 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:51 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:51 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:51 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:51 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:42:52 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+10월 13, 2025 8:42:53 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+2025.10.13 20:42:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+10월 13, 2025 8:42:54 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+2025.10.13 20:43:50 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:50 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:50 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:50 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:51 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:51 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:51 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:52 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:52 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:52 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:52 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:52 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:52 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:52 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:54 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:54 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:55 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:55 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:55 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:55 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:55 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:55 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:55 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:55 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:55 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:56 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:56 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:59 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala
+2025.10.13 20:43:59 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:59 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala
+2025.10.13 20:43:59 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:43:59 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala
+2025.10.13 20:43:59 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 20:53:50 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 21:34:13 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 21:34:41 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.13 22:18:58 INFO  Shutting down server
+2025.10.13 22:18:58 INFO  shutting down Metals
+2025.10.13 22:18:58 INFO  Shut down connection with build server.
+2025.10.13 22:18:58 INFO  Exiting server
+2025.10.22 17:21:22 INFO  Started: Metals version 1.6.2 in folders 'D:\coding\COSE212-plrg-hw' for client Visual Studio Code 1.105.0.
+2025.10.22 17:21:25 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.22 17:21:34 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.22 17:21:34 INFO  Attempting to connect to the build server...
+2025.10.22 17:21:34 INFO  No running Bloop server found, starting one.
+2025.10.22 17:21:40 INFO  Starting compilation server
+2025.10.22 17:21:46 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\coding\COSE212-plrg-hw\.metals\bsp.trace.json or C:\Users\sebin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.10.22 17:21:47 INFO  time: Connected to build server in 12s
+2025.10.22 17:21:46 INFO  Connected to Build server: Bloop v2.0.13
+2025.10.22 17:21:47 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.10.22 17:21:47 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.10.22 17:21:47 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.10.22 17:21:47 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.10.22 17:21:47 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.10.22 17:21:47 INFO  time: Imported build in 0.18s
+2025.10.22 17:21:53 INFO  time: indexed workspace in 5.89s
+2025.10.22 17:21:53 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala
+2025.10.22 17:21:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.22 17:21:53 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala
+2025.10.22 17:21:53 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.22 17:21:56 INFO  time: code lens generation in 2.84s
+2025.10.22 17:21:56 INFO  time: code lens generation in 2.96s
+2025.10.22 17:21:57 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.10.22 17:24:08 INFO  Shutting down server
+2025.10.22 17:24:08 INFO  shutting down Metals
+2025.10.22 17:24:08 INFO  Shut down connection with build server.
+2025.10.22 17:24:08 INFO  Exiting server
+2025.11.17 13:50:32 INFO  Started: Metals version 1.6.3 in folders 'D:\coding\COSE212-plrg-hw' for client Visual Studio Code 1.105.1.
+2025.11.17 13:50:33 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.17 13:50:33 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 13:50:38 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 13:50:39 INFO  Attempting to connect to the build server...
+2025.11.17 13:50:39 INFO  No running Bloop server found, starting one.
+2025.11.17 13:50:42 INFO  Starting compilation server
+2025.11.17 13:50:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\coding\COSE212-plrg-hw\.metals\bsp.trace.json or C:\Users\sebin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.11.17 13:50:46 INFO  time: Connected to build server in 7.36s
+2025.11.17 13:50:45 INFO  Connected to Build server: Bloop v2.0.16
+2025.11.17 13:50:46 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.11.17 13:50:46 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.11.17 13:50:46 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.11.17 13:50:46 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.11.17 13:50:46 INFO  Empty build targets. Expected at least one build target identifier. (full report at: "D:\coding\COSE212-plrg-hw\.metals\.reports\bloop\2025-10-13\r_Empty build targets...._20-41-26-965.md")
+2025.11.17 13:50:46 INFO  time: Imported build in 0.11s
+2025.11.17 13:50:48 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.17 13:50:48 INFO  time: indexed workspace in 2.41s
+2025.11.17 13:50:48 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala
+2025.11.17 13:50:48 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 13:50:48 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala
+2025.11.17 13:50:48 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 13:50:50 INFO  time: code lens generation in 1.23s
+2025.11.17 13:50:50 INFO  time: code lens generation in 1.78s
+2025.11.17 13:50:51 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 13:52:45 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 13:52:45 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala
+2025.11.17 13:52:45 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 13:52:45 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 13:52:47 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 13:53:30 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala
+2025.11.17 13:53:30 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 13:53:30 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 13:53:31 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+11월 17, 2025 1:53:31 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 26
+11월 17, 2025 1:53:31 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 24
+2025.11.17 13:53:30 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 13:53:31 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw2-mini-fsharp\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+11월 17, 2025 2:08:22 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+정보: Unsupported notification method: $/setTrace
+2025.11.17 14:08:23 INFO  Shutting down server
+2025.11.17 14:08:23 INFO  shutting down Metals
+2025.11.17 14:08:23 INFO  Shut down connection with build server.
+2025.11.17 14:08:23 INFO  Exiting server

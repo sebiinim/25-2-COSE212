@@ -223,7 +223,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mafterAllPass(eval(hanoiMovesExpr(3, 0, 1, 2)))[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should be "[(0, 2); (0, 1); (2, 1); (0, 2); (1, 0); (1, 2); (0, 2)]"[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 109 events.[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 2 seconds, 107 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 2 seconds, 532 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 109[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 109, failed 0, canceled 0, ignored 0, pending 0[0m[0m
