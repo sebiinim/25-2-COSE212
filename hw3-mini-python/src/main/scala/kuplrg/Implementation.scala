@@ -9,7 +9,7 @@ object Implementation extends Template {
     val State(k, s, h, m) = st
     
     k match
-      case Nil => error("empty cont")
+      case Nil => Error("empty cont")
 
       case inst :: ks =>
         inst match
@@ -182,8 +182,172 @@ object Implementation extends Template {
 
               case _ => State(IRaise(TypeError) :: Nil, s, h, m)  // 정의되지 않은 연산은 TypeError
           
+          // 4.5 Other Instructions
+          // 현재 스택에 있는 값을 addr에 쓰기
+          case IWrite(addr) => 
+              s match 
+                case v :: ss => 
+                  State(ks, ss, h, m + (addr->v))
+              
+          // addr에 해당하는 list에서 n번째 값을 읽는 inst
+          case IGetItem => 
+            s match 
+              case n :: addrV(addr) :: ss => 
+                (asInt(n), m.get(addr)) match
+                  case (Some(n), Some(ListV(xs))) => 
+                    val m = xs.length // 리스트 길이
 
-          
+                    if -m<=n && n<= then State(ks, xs(m+n), h, m)
+                    else if 0<=n && n<m then State(ks, xs(n) :: ss, h, m)
+                    else if n< -m || m<=n then State(IRaise(IndexError) :: Nil, s, h, m)
+                    else State(IRaise(IndexError) :: Nil, s, h, m)
+              case _ => State(IRaise(IndexError) :: Nil, s, h, m)
+                
+          // addr에 해당하는 list의 n번째 값을 설정하는 inst
+          case ISetItem => 
+            s match 
+              case n :: addrV(addr) :: v :: ss => 
+                (asInt(n), m.get(addr)) match
+                  case (Some(n), Some(ListV(xs))) => 
+                    val m = xs.length // 리스트 길이
+
+                    if -m<=n && n<= then 
+                      val updatedList = xs.updated(m+n, v)
+                      State(ks, ss, h, m + (addr->ListV(updatedList)))
+                    else if 0<=n && n<m then 
+                      val updatedList = xs.updated(n, v)
+                      State(ks, xs(n) :: ss, h, m + (addr->ListV(updatedList)))
+                    else if n< -m || m<=n then State(IRaise(IndexError) :: Nil, s, h, m)
+                    else State(IRaise(IndexError) :: Nil, s, h, m)
+              case _ => State(IRaise(IndexError) :: Nil, s, h, m)
+
+          // 리스트 만들기
+          case IList(length) => 
+            // 스택에서 n개 뽑기, splitAt 사용
+            val (values, rest) = s.splitAt(n)
+            val vs = values.reverse // 스택이니까 뒤집혀 있을 거다.
+            val addr = newAddr(m)
+            val mem = m + (addr->vs)
+            State(ks, addr :: s, h, mem)
+
+          // 리스트에 원소 추가
+          case IAppend =>
+            s match
+              case v :: Addr(addr) :: ss =>
+                m.get(addr) match 
+                  case Some(ListV(xs)) =>
+                    val newList = xs :+ v
+                    State(ks, AddrV(addr) :: ss, h, m + (addr -> ListV(newList)))
+                  case _ =>
+                    State(IRaise(TypeError) :: Nil, ss, h, m)
+              case _ => State(IRaise(TypeError) :: Nil, s, h, m)
+
+          // 특정 cont로 jump
+          case IJmpIf(kv) => 
+            s match
+              case v :: ss =>
+                if isTruthy(v, m) then 
+                  val KValue(kp, sp, hp) = kv // kv 해체
+                  State(kp, sp, hp, m) 
+                else State(ks, ss, h, m)
+              case _ => State(IRaise(TypeError) :: Nil, s, h, m)
+
+          //
+          case IJmp(control) => 
+            val KValue(kp, sp, hp) = h(control)  // h 해체
+            State(kp, sp, hp, m)
+
+
+          //
+          case ICall(argsize) => 
+            s match
+              val (vals, rest) = s.splitAt(n+1) // vn, ... , v1과 a 추출
+              
+              val values = vals.init.reverse
+              val a = vals.last
+
+              m.get(a) match 
+                case Some(CloV(params, body, cloEnv)) => 
+                  val kPrime = IBlock(env, body) :: Return :: Nil
+                  val hBody = h + (Return->ContV(k, rest, h))
+                  val m1 = m + newAddr(m)
+                  val m2 = m1 + 
+
+            
+              
+          case IReturn => 
+            h.get(Return) match
+              case Some(KValue(kp, sp, hp)) => 
+                s match 
+                  case v :: ss => 
+                    State(ks, v :: sp, hp, m)
+                  case _ => State(IRaise(TypeError) :: Nil, s, h, m)
+              case _ => State(IRaise(RuntimeError) :: Nil, s, h, m)
+
+          // 
+          case IYield => 
+            h.get(Return) match
+              case Some(KValue(kp, sp, hp)) => 
+                s match
+                  case v :: ss => 
+                    val (kp, sp, hp) => h(Return)
+                    State(kp, KValue(ks, ss, h) :: v :: sp, hp, m)
+                  case _ => State(IRaise(TypeError) :: Nil, s, h, m)
+              case _ => State(IRaise(RuntimeError) :: Nil, s, h, m)
+
+          //
+          case IIter =>
+            s match 
+              case AddrV(addr) :: rest =>
+                m.get(addr) match 
+                  case Some(IterV(_, i)) => 
+                    State(ks, s, h, m)
+                  case Some(ListV(_)) => 
+                    val aIter = newAddr(m)
+                    State(ks, AddrV(aIter) :: rest, h, m + (aIter->IterV(addr, 0)))
+                  case _ => State(IRaise(TypeError) :: Nil, rest, h, m)
+              case _ => State(IRaise(TypeError) :: Nil, s, h, m)
+
+          //
+          case INext => 
+            s match
+              case addr :: rest =>
+                m.get(addr) match   // v
+                  case Some(IterV(addr2, idx)) =>
+                    m.get(addr2) match  // v' 
+                      case Some(KValue(kp, sp, hp)) =>
+                        val psiYield = KValue(IWrite(addr2) :: ks, rest, h)
+                        val psiReturn = KValue(IDrop :: IRaise(StopIteration) :: Nil, rest, h)
+                        val hNext = hp + (Yield->psiYield) + (Return->psiReturn)
+                        State(kp, sp, hNext, m)
+                      case Some(IList(xs)) =>
+                        val mNext = m + (addr->IterV(addr2, idx+1))
+                        if (idx < xs.length) then State(ks, xs(idx) :: rest, h, mNext) 
+                        else State(IRaise(StopIteration) :: Nil, rest, h, m)
+                  case _ => State(IRaise(TypeError) :: Nil, rest, h, m)
+              case _ => State(IRaise(TypeError) :: Nil, rest, h, m)
+
+          //
+          case IDrop =>
+            s match
+              case v :: rest =>
+                State(ks, rest, h, m)
+
+          case _ => 
+            State(IRaise(TypeError) :: Nil, rest, h, m)
+            
+                      
+ 
+                        
+                    
+                
+            
+
+            
+            
+
+
+
             
 
 
@@ -249,8 +413,19 @@ object Implementation extends Template {
         case _ => false
     case _ => false
           
-      
-
+  // NumV를 Int로 바꾸기
+  private def asInt(v: Value): Option[Int] = v match
+    case NumV(n) => Some(n)
+    case _ => None
+  
+  // 아마도 점프할 cont가 멀쩡한 녀석인지 확인하기 위함인듯
+  private def isTruthy(v: Value, mem: Mem): Boolean = v match
+    case NoneV => false
+    case NumV(n) if n!=0 => n
+    case BoolV(b) => b
+    case AddrV(a) => isTruthy(mem(a), mem)
+    case ListV(xs) => 0<n
+    case _ => true
 
       
   
