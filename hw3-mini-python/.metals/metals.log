@@ -12554,3 +12554,12 @@ Exception in thread "pool-4252-thread-1" java.lang.InterruptedException
 2025.11.17 19:16:47 INFO  Shutting down server
 2025.11.17 19:16:47 INFO  shutting down Metals
 2025.11.17 19:16:47 INFO  Exiting server
+2025.11.17 19:16:59 INFO  Started: Metals version 1.6.3 in folders 'D:\coding\COSE212-plrg-hw\hw3-mini-python' for client Visual Studio Code 1.105.1.
+2025.11.17 19:17:00 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.17 19:17:01 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw3-mini-python\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 19:17:05 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw3-mini-python\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.17 19:17:05 WARN  no build target for: D:\coding\COSE212-plrg-hw\hw3-mini-python\src\main\scala\kuplrg\Implementation.scala
+2025.11.17 19:17:10 INFO  time: code lens generation in 4.89s
+2025.11.17 19:17:10 INFO  time: code lens generation in 4.89s
+2025.11.17 19:17:10 INFO  time: code lens generation in 4.89s
+2025.11.17 19:17:12 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw3-mini-python\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6

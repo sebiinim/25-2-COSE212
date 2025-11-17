@@ -1,3 +1,16 @@
+file:///D:/coding/COSE212-plrg-hw/hw3-mini-python/src/main/scala/kuplrg/Implementation.scala
+### java.lang.IndexOutOfBoundsException: -1
+
+occurred in the presentation compiler.
+
+presentation compiler configuration:
+
+
+action parameters:
+offset: 4814
+uri: file:///D:/coding/COSE212-plrg-hw/hw3-mini-python/src/main/scala/kuplrg/Implementation.scala
+text:
+```scala
 package kuplrg
 
 object Implementation extends Template {
@@ -14,13 +27,13 @@ object Implementation extends Template {
       case inst :: ks =>
         inst match
 
-          // 4.2 block
+          // 4-2. block
           // Block(Statements의 List), 각 stmt를 IStmt로 바꾸기
           case IBlock(env, Block(stmts)) =>
             val newK = stmts.map(IStmt(env, _)) ::: ks
             State(newK, s, h, m)
 
-          // 4.1 Statement
+          // 4-1. Statement
           // IStmt는 다시 여러 Stmt로 case가 나눠진다.
           case IStmt(env, stmt) => stmt match
             
@@ -98,7 +111,7 @@ object Implementation extends Template {
               State(IExpr(env, expr) :: IYield :: ks, s, h, m)
 
 
-          // 4.3 Expression
+          // 4-3. Expression
           case IExpr(env, expr) => 
             expr match
               
@@ -132,58 +145,8 @@ object Implementation extends Template {
 
               case ELambda(params, body) => 
                 val addr = newAddr(m)
-                val block = Block(SReturn(body))  // closure의 body는 항상 Block이어야
-                val clo = CloV(params, block, env)
-                val mem1 = m + (addr->clo)
-                State(ks, addrV(addr) :: s, h, mem1)
-
-              case EApp(fun, args) => 
-                State(IExpr(env, fun) :: args.map(IExpr(env, _)) ::: ICall(fun.length) :: ks, s, h, m)
-
-              case ECond(cond, thenExpr, elseExpr) => 
-                val psi = State(IExpr(env, cond) :: ks, s, h, m)
-                State(IExpr(env, thenExpr) :: IJmpIf(psi) :: IExpr(env, elseExpr) :: ks, s, h, m)
-
-              case EIter(expr) => 
-                State(IExpr(env, expr) :: IIter :: ks, s, h, m)
-
-              case ENext(expr) => 
-                State(IExpr(env, expr) :: INext :: ks, s, h, m)
-
-          // 4.4 Binary Operation
-          case IBOp(bop) => 
-            (bop, s) match
-
-              case (Add, NumV(n2) :: NumV(n1) :: ss) => State(ks, NumV(n1 + n2) :: ss, h, m)
-
-              case (Mul, NumV(n2) :: NumV(n2) :: ss) => State(ks, NumV(n1 * n2) :: ss, h, m)
-
-              case (Div, NumV(0) :: NumV(n1) :: ss) => State(IRaise(ZeroDivisionError) :: Nil, ss, h, m)
-
-              case (Div, NumV(n2) :: NumV(n1) :: ss) => State(ks, NumV(n1/n2) :: ss, h, m)
-
-              case (Mod, NumV(0) :: NumV(n1) :: ss) => State(IRaise(ZeroDivisionError) :: Nil, ss, h, m)
-
-              case (Mod, NumV(n2) :: NumV(n2) :: ss) => State(ks, NumV(n1%n2) :: ss, h, m)
-
-              case (Eq, v2 :: v1 :: ss) => State(ks, Equal(v1, v2, m) :: ss, h, m)
-
-              case (Is, v2 :: v1 :: ss) => State(ks, Is(v1, v2) :: ss, h, m)
-
-              case (Lt, v2 :: v1 :: ss) => 
-                lessThan(v1, v2, m) match 
-                  case Some(b) => State(ks, BoolV(b) :: ss, h, m)
-                  case None => State(IRaise(TypeError) :: Nil, ss, h, m)
-              
-              case (Lte, v2 :: v1 :: ss) => 
-                lessThan(v1, v2, m) match 
-                  case Some(b) => State(ks, BoolV(b || equal(v1, v2, m)) :: ss, h, m)
-                  case None => State(IRaise(TypeError) :: Nil, ss, h, m)
-
-              case _ => State(IRaise(TypeError) :: Nil, s, h, m)  // 정의되지 않은 연산은 TypeError
-          
-
-          
+                val mem1 = m + (@@)
+                State(ks, addr :: s, h, m)
             
 
 
@@ -206,55 +169,28 @@ object Implementation extends Template {
     case SWhile(cond, body) => hasYieldStmt(body)
     case _ => false
 
-
-  // 문서가 워낙 잘 나와 있어서 그대로만 만들면 된다.
-  private def is(v1: Value, v2: Value): Boolean = (v1, v2) match
-    case (NoneV, NoneV) => true
-    case (NumV(n1), NumV(n2)) => n1 == n2
-    case (BoolV(b1), BoolV(b2)) => b1 == b2
-    case (AddrV(a1), AddrV(a2)) => a1 == a2
-    case _ => false
-  
-  private def equal(v1: Value, v2: Value, mem: Mem): Boolean = (v1, v2) match
-    case _ if is(v1, v2) => true
-    case (AddrV(a1), AddrV(a2)) => 
-      (mem.get(a1), mem.get(a2)) match 
-        case (Some(v1p), Some(v2p)) => equal(v1p, v2p, mem)
-        case _ => false
-    case (ListV(xs), ListV(ys)) if xs.length == ys.length => 
-      xs.zip(ys).forall {(x, y) => equal(x, y, mem)} 
-    case _ => false
-  
-  // 하이고많다. lessThan은 Option임에 주의하자
-  private def lessThan(v1: Value, v2: Value, mem: Mem): Option[Boolean] = (v1, v2) match
-    case(NumV(n1), NumV(n2)) => Some(n1 < n2)
-    case(AddrV(a1), AddrV(a2)) => 
-      (mem.get(a1), mem.get(a2)) match
-        case (Some(v1p), Some(v2p)) => lessThan(v1p, v2p, mem)
-        
-    // 리스트인 경우. 빈 리스트는 시작이 Nil인걸 이용하자. 하나씩 차근차근
-    case (ListV(xs), ListV(ys)) =>
-      (xs, ys) match
-        case (Nil, Nil) => Some(false) // n=m=0
-        case (Nil, _) => Some(true) // n=0<m
-        case (_, Nil) => Some(false) // n>0=m
-
-        case (x1::xss, y1::yss) => 
-          (lessThan(x1, y1, mem), equal(x1, y1, mem)) match
-            case (Some(bLt), bEq) => 
-              if bLt then true
-              else if !bLt && !bEq then false
-              else lessThan(xss, yss, mem)
-            case _ => false
-        case _ => false
-    case _ => false
-          
-      
-
-
-      
   
 
 
   def locals(block: Block): Set[String] = ???
 }
+
+```
+
+
+
+#### Error stacktrace:
+
+```
+scala.collection.LinearSeqOps.apply(LinearSeq.scala:129)
+	scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	scala.collection.immutable.List.apply(List.scala:79)
+	dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:244)
+	dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:101)
+	dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:88)
+	dotty.tools.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:46)
+	dotty.tools.pc.ScalaPresentationCompiler.signatureHelp$$anonfun$1(ScalaPresentationCompiler.scala:435)
+```
+#### Short summary: 
+
+java.lang.IndexOutOfBoundsException: -1
