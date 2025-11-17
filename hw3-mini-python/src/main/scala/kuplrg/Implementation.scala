@@ -335,22 +335,6 @@ object Implementation extends Template {
 
           case _ => 
             State(IRaise(TypeError) :: Nil, rest, h, m)
-            
-                      
- 
-                        
-                    
-                
-            
-
-            
-            
-
-
-
-            
-
-
 
   // Helper func
   // 안 쓰인 주소 만드는 함수
@@ -430,6 +414,18 @@ object Implementation extends Template {
       
   
 
+  // 블록 안 지역 변수 집합
+  def locals(block: Block): Set[String] = 
+    block.stmts.foldLeft(Set.empty[String]) {
+      (acc, stmt) => acc + localsOfStmt(stmt)
+    }
 
-  def locals(block: Block): Set[String] = ???
+  def localsOfStmt(stmt: Stmt): Set[String] = stmt match
+    case SAssign(x, e) => Set(s)
+    case SDef(name, params, body) => Set(x0)
+    case SIf(cond, thenBlock, elseBlock) => localsOfStmt(thenBlock) ++ localsOfStmt(elseBlock)
+    case STry(body, except) => localsOfStmt(body) ++ localsOfStmt(except)
+    case SWhile(cond, body) => localsOfStmt(body)
+    case _ => Set.empty
+  
 }
