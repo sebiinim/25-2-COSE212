@@ -9,7 +9,6 @@ object Implementation extends Template {
     val State(k, s, h, m) = st
     
     k match
-      case Nil => Error("empty cont")
 
       case inst :: ks =>
         inst match
@@ -41,7 +40,7 @@ object Implementation extends Template {
 
             // If cond then B else B
             case SIf(cond, thenB, elseB) => 
-              val kv = KValue(IBlock(env, thenB) :: ks, s, h, m)
+              val kv = KValue(IBlock(env, thenB) :: ks, s, h)
               State(IExpr(env, cond) :: IJmpIf(kv) :: IBlock(env, elseB) :: ks, s, h, m)
 
             // while e: B
@@ -49,9 +48,9 @@ object Implementation extends Template {
               val psiCond = KValue(IStmt(env, SWhile(cond, body)) :: ks, s, h)
               val psiBreak = KValue(ks, s, h)
 
-              val Body: Handler = h + (Continue->psiCond) + (Break->psiBreak)  // 여기 대소문자 확인!
-              val psiBody = KValue(IBlock(env, body) :: IStmt(env, SWhile(cond, body) :: ks, s, hBody))
-              State(IExpr(env, cond) :: IJumIf(psiBody) :: ks, s, h, m)
+              val hBody: Handler = h + (Continue->psiCond) + (Break->psiBreak)  // 여기 대소문자 확인!
+              val psiBody = KValue(IBlock(env, body) :: IStmt(env, SWhile(cond, body)) :: ks, s, hBody)
+              State(IExpr(env, cond) :: IJmpIf(psiBody) :: ks, s, h, m)
 
             // Break면 jmp
             case SBreak =>
@@ -64,15 +63,15 @@ object Implementation extends Template {
             // try / except
             case STry(body, except) => 
               val psiRaise = KValue(IBlock(env, except) :: ks, s, h)
-              val psiFianlly = KValue(ks, s, h)
+              val psiFianally = KValue(ks, s, h)
 
-              val hBody = h + (Raise->psiRaise) + (Finally->psiFinally)
+              val hBody = h + (Raise->psiRaise) + (Finally->psiFianally)
 
               State(IBlock(env, body) :: IJmp(Finally) :: Nil, s, hBody, m)
 
             // raise error
             case SRaise =>
-              State(Raise(RuntimeError) :: Nil, s, h, m)
+              State(IRaise(RuntimeError) :: Nil, s, h, m)
 
             // function def
             case SDef(name, params, body) => 
@@ -103,13 +102,13 @@ object Implementation extends Template {
             expr match
               
               case ENone => 
-                State(ks, None :: s, h, m)
+                State(ks, NoneV :: s, h, m)
 
               case ENum(number) => 
-                State(ks, number :: s, h, m)
+                State(ks, NumV(number) :: s, h, m)
 
               case EBool(bool) => 
-                State(ks, bool :: s, h, m)
+                State(ks, BoolV(bool) :: s, h, m)
 
               case EId(name) => 
                 env.get(name) match 
@@ -135,13 +134,13 @@ object Implementation extends Template {
                 val block = Block(SReturn(body))  // closure의 body는 항상 Block이어야
                 val clo = CloV(params, block, env)
                 val mem1 = m + (addr->clo)
-                State(ks, addrV(addr) :: s, h, mem1)
+                State(ks, AddrV(addr) :: s, h, mem1)
 
               case EApp(fun, args) => 
-                State(IExpr(env, fun) :: args.map(IExpr(env, _)) ::: ICall(fun.length) :: ks, s, h, m)
+                State(IExpr(env, fun) :: args.map(IExpr(env, _)) ::: ICall(args.length) :: ks, s, h, m)
 
               case ECond(cond, thenExpr, elseExpr) => 
-                val psi = State(IExpr(env, cond) :: ks, s, h, m)
+                val psi = KValue(IExpr(env, cond) :: ks, s, h)
                 State(IExpr(env, thenExpr) :: IJmpIf(psi) :: IExpr(env, elseExpr) :: ks, s, h, m)
 
               case EIter(expr) => 
@@ -156,7 +155,7 @@ object Implementation extends Template {
 
               case (Add, NumV(n2) :: NumV(n1) :: ss) => State(ks, NumV(n1 + n2) :: ss, h, m)
 
-              case (Mul, NumV(n2) :: NumV(n2) :: ss) => State(ks, NumV(n1 * n2) :: ss, h, m)
+              case (Mul, NumV(n2) :: NumV(n1) :: ss) => State(ks, NumV(n1 * n2) :: ss, h, m)
 
               case (Div, NumV(0) :: NumV(n1) :: ss) => State(IRaise(ZeroDivisionError) :: Nil, ss, h, m)
 
@@ -164,11 +163,11 @@ object Implementation extends Template {
 
               case (Mod, NumV(0) :: NumV(n1) :: ss) => State(IRaise(ZeroDivisionError) :: Nil, ss, h, m)
 
-              case (Mod, NumV(n2) :: NumV(n2) :: ss) => State(ks, NumV(n1%n2) :: ss, h, m)
+              case (Mod, NumV(n2) :: NumV(n1) :: ss) => State(ks, NumV(n1%n2) :: ss, h, m)
 
-              case (Eq, v2 :: v1 :: ss) => State(ks, Equal(v1, v2, m) :: ss, h, m)
+              case (Eq, v2 :: v1 :: ss) => State(ks, BoolV(equal(v1, v2, m)) :: ss, h, m)
 
-              case (Is, v2 :: v1 :: ss) => State(ks, Is(v1, v2) :: ss, h, m)
+              case (Is, v2 :: v1 :: ss) => State(ks, BoolV(is(v1, v2)) :: ss, h, m)
 
               case (Lt, v2 :: v1 :: ss) => 
                 lessThan(v1, v2, m) match 
@@ -192,64 +191,70 @@ object Implementation extends Template {
           // addr에 해당하는 list에서 n번째 값을 읽는 inst
           case IGetItem => 
             s match 
-              case n :: addrV(addr) :: ss => 
+              case n :: AddrV(addr) :: rest => 
                 (asInt(n), m.get(addr)) match
                   case (Some(n), Some(ListV(xs))) => 
-                    val m = xs.length // 리스트 길이
+                    val len = xs.length // 리스트 길이
 
-                    if -m<=n && n<= then State(ks, xs(m+n), h, m)
-                    else if 0<=n && n<m then State(ks, xs(n) :: ss, h, m)
-                    else if n< -m || m<=n then State(IRaise(IndexError) :: Nil, s, h, m)
+                    if -len <= n && n<=0 then State(ks, xs(len+n) :: rest, h, m)
+                    else if 0<=n && n<len then State(ks, xs(n) :: rest, h, m)
+                    else if n< -len || len<=n then State(IRaise(IndexError) :: Nil, s, h, m)
                     else State(IRaise(IndexError) :: Nil, s, h, m)
               case _ => State(IRaise(IndexError) :: Nil, s, h, m)
                 
           // addr에 해당하는 list의 n번째 값을 설정하는 inst
           case ISetItem => 
             s match 
-              case n :: addrV(addr) :: v :: ss => 
+              case n :: AddrV(addr) :: v :: rest => 
                 (asInt(n), m.get(addr)) match
                   case (Some(n), Some(ListV(xs))) => 
-                    val m = xs.length // 리스트 길이
+                    val len = xs.length // 리스트 길이
 
-                    if -m<=n && n<= then 
-                      val updatedList = xs.updated(m+n, v)
-                      State(ks, ss, h, m + (addr->ListV(updatedList)))
-                    else if 0<=n && n<m then 
+                    if -len<=n && n<=0 then 
+                      val updatedList = xs.updated(len+n, v)
+                      State(ks, rest, h, m + (addr->ListV(updatedList)))
+                    else if 0<=n && n<len then 
                       val updatedList = xs.updated(n, v)
-                      State(ks, xs(n) :: ss, h, m + (addr->ListV(updatedList)))
-                    else if n< -m || m<=n then State(IRaise(IndexError) :: Nil, s, h, m)
+                      State(ks, xs(n) :: rest, h, m + (addr->ListV(updatedList)))
+                    else if n< -len || len<=n then State(IRaise(IndexError) :: Nil, s, h, m)
                     else State(IRaise(IndexError) :: Nil, s, h, m)
               case _ => State(IRaise(IndexError) :: Nil, s, h, m)
 
           // 리스트 만들기
           case IList(length) => 
             // 스택에서 n개 뽑기, splitAt 사용
-            val (values, rest) = s.splitAt(n)
+            val (values, rest) = s.splitAt(length)
             val vs = values.reverse // 스택이니까 뒤집혀 있을 거다.
             val addr = newAddr(m)
-            val mem = m + (addr->vs)
-            State(ks, addr :: s, h, mem)
+            val mem = m + (addr -> ListV(vs))
+            State(ks, AddrV(addr) :: s, h, mem)
 
           // 리스트에 원소 추가
           case IAppend =>
-            s match
-              case v :: Addr(addr) :: ss =>
-                m.get(addr) match 
+            s match {
+              case v :: AddrV(addr) :: ss =>
+                m.get(addr) match {
                   case Some(ListV(xs)) =>
                     val newList = xs :+ v
                     State(ks, AddrV(addr) :: ss, h, m + (addr -> ListV(newList)))
                   case _ =>
                     State(IRaise(TypeError) :: Nil, ss, h, m)
-              case _ => State(IRaise(TypeError) :: Nil, s, h, m)
+                }
+              case _ =>
+                State(IRaise(TypeError) :: Nil, s, h, m)
+            }
 
           // 특정 cont로 jump
           case IJmpIf(kv) => 
             s match
-              case v :: ss =>
-                if isTruthy(v, m) then 
-                  val KValue(kp, sp, hp) = kv // kv 해체
+              case v :: rest =>
+                if (isTruthy(v, m)) {
+                  val KValue(kp, sp, hp) = kv
                   State(kp, sp, hp, m) 
-                else State(ks, ss, h, m)
+                } 
+                else {
+                  State(ks, rest, h, m)
+                }
               case _ => State(IRaise(TypeError) :: Nil, s, h, m)
 
           //
@@ -257,22 +262,85 @@ object Implementation extends Template {
             val KValue(kp, sp, hp) = h(control)  // h 해체
             State(kp, sp, hp, m)
 
+          //
+          case IRaise(err) => 
+            if h.contains(Raise) then
+              State(IJmp(Raise) :: Nil, s, h, m)
+            else 
+              error(err.str)
 
           //
           case ICall(argsize) => 
-            s match
-              val (vals, rest) = s.splitAt(n+1) // vn, ... , v1과 a 추출
-              
-              val values = vals.init.reverse
-              val a = vals.last
+            val (argsRev, rest) = s.splitAt(argsize) // vn, ... , v1과 a, s로 나눔
+            
+            rest match
+              case AddrV(a) :: rest2 => 
+                val args = argsRev.reverse // v1, ..., vn 으로 정렬
+                m.get(a) match 
 
-              m.get(a) match 
-                case Some(CloV(params, body, cloEnv)) => 
-                  val kPrime = IBlock(env, body) :: Return :: Nil
-                  val hBody = h + (Return->ContV(k, rest, h))
-                  val m1 = m + newAddr(m)
-                  val m2 = m1 + 
+                  // 일반 함수 실행
+                  case Some(CloV(params, body, cloEnv)) => 
 
+                    val paramsAddrs = newAddrs(m, params.length)  // a1, ..., an
+                    val mem1 = m ++ (paramsAddrs.zip(args))
+
+                    val localNames = locals(body).toList
+                    val localAddrs = newAddrs(m, localNames.length)
+                    val mem2 = localAddrs.foldLeft(mem1) {
+                      case (mm, a) => mm + (a -> NoneV)
+                    }
+
+                    // sigma_body(envBody) 만들기
+                    val envParams = (params zip paramsAddrs).toMap
+                    val envLocals = (localNames zip localAddrs).toMap
+                    val envBody = cloEnv ++ envParams ++ envLocals
+
+                    // H_body 만들기
+                    val psiReturn = KValue(k, s, h)
+                    val hBody = h + (Return->psiReturn)
+
+                    // k_prime 만들기
+                    val kPrime = IBlock(envBody, body) :: IReturn :: Nil
+
+                    State(kPrime, List(NoneV), hBody, mem2)
+
+                  // 제너레이터 함수 실행
+                  case Some(GenV(params, body, genEnv)) => 
+
+                    val paramsAddrs = newAddrs(m, params.length)
+                    val mem1 = m ++ (paramsAddrs.zip(args))
+
+                    // block B 내부 지역 변수 집합
+                    val localNames = locals(body).toList
+                    val localAddrs = newAddrs(m, localNames.length) // a'1, a'2, ..., a'm
+
+                    val mem2 = localAddrs.foldLeft(mem1) {
+                      case (mm, a) => mm + (a -> NoneV)
+                    }
+
+                    // sigma_body(envBody) 만들기
+                    val envParams = (params zip paramsAddrs).toMap
+                    val envLocals = (localNames zip localAddrs).toMap
+                    val envBody = genEnv ++ envParams ++ envLocals
+
+                    val aCont = newAddr(mem2)
+                    // H_body 만들기
+                    val psiReturn = KValue(k, s, h)
+                    val hBody = h + (Return->psiReturn)
+                    // k_prime 만들기
+                    val kPrime = IBlock(envBody, body) :: IReturn :: Nil
+                    val psiNext = KValue(kPrime, List(NoneV), hBody)
+                    val mem3 = mem2 + (aCont->ContV(psiNext))
+
+                    val aIter = newAddr(mem3) 
+
+                    val mem4 = mem3 + (aIter->IterV(aCont, 0))
+
+                    State(ks, AddrV(aIter) :: rest2, h, mem4)
+
+                  case _ => State(IRaise(TypeError) :: Nil, rest2, h, m)
+                  
+              case _ => State(IRaise(TypeError) :: Nil, rest, h, m)
             
               
           case IReturn => 
@@ -289,9 +357,8 @@ object Implementation extends Template {
             h.get(Return) match
               case Some(KValue(kp, sp, hp)) => 
                 s match
-                  case v :: ss => 
-                    val (kp, sp, hp) => h(Return)
-                    State(kp, KValue(ks, ss, h) :: v :: sp, hp, m)
+                  case v :: rest => 
+                    State(kp, ContV(KValue(ks, rest, h)) :: v :: sp, hp, m)
                   case _ => State(IRaise(TypeError) :: Nil, s, h, m)
               case _ => State(IRaise(RuntimeError) :: Nil, s, h, m)
 
@@ -311,21 +378,21 @@ object Implementation extends Template {
           //
           case INext => 
             s match
-              case addr :: rest =>
+              case AddrV(addr) :: rest =>
                 m.get(addr) match   // v
                   case Some(IterV(addr2, idx)) =>
                     m.get(addr2) match  // v' 
-                      case Some(KValue(kp, sp, hp)) =>
+                      case Some(ContV(KValue(kp, sp, hp))) =>
                         val psiYield = KValue(IWrite(addr2) :: ks, rest, h)
                         val psiReturn = KValue(IDrop :: IRaise(StopIteration) :: Nil, rest, h)
                         val hNext = hp + (Yield->psiYield) + (Return->psiReturn)
                         State(kp, sp, hNext, m)
-                      case Some(IList(xs)) =>
+                      case Some(ListV(xs)) =>
                         val mNext = m + (addr->IterV(addr2, idx+1))
-                        if (idx < xs.length) then State(ks, xs(idx) :: rest, h, mNext) 
-                        else State(IRaise(StopIteration) :: Nil, rest, h, m)
-                  case _ => State(IRaise(TypeError) :: Nil, rest, h, m)
-              case _ => State(IRaise(TypeError) :: Nil, rest, h, m)
+                        if (idx < xs.length.toInt) then State(ks, xs(idx) :: rest, h, mNext) 
+                        else State(IRaise(StopIteration) :: Nil, s, h, m)
+                  case _ => State(IRaise(TypeError) :: Nil, s, h, m)
+              case _ => State(IRaise(TypeError) :: Nil, s, h, m)
 
           //
           case IDrop =>
@@ -334,24 +401,29 @@ object Implementation extends Template {
                 State(ks, rest, h, m)
 
           case _ => 
-            State(IRaise(TypeError) :: Nil, rest, h, m)
+            State(IRaise(TypeError) :: Nil, s, h, m)
 
   // Helper func
   // 안 쓰인 주소 만드는 함수
-  private def newAddr(memory: Mem): Addr = 
+  private def newAddr(mem: Mem): Addr = 
     if mem.isEmpty then 0 else mem.keys.max + 1
+
+  // 안 쓰인 주소 여러 개 연속해 만드는 함수
+  private def newAddrs(mem: Mem, n: Int): List[Addr] = 
+    val start = if mem.isEmpty then 0 else mem.keys.max+1
+    (0 until n).map(i => start + i).toList
         
   // block이 yield문을 포함하는지
   private def hasYield(block: Block): Boolean = 
     block.stmts.exists(hasYieldStmt)
 
   // stmt가 yield문을 포함하는지
-  private def hasYieldStmt(stmt: Stmt): Boolen = stmt match
+  private def hasYieldStmt(stmt: Stmt): Boolean = stmt match
     case SYield(expr) => true
-    case SDef(name, params, body) => hasYieldStmt(body)
-    case SIf(cond, thenBlock, elseBlock) => hasYieldStmt(thenBlock) || hasYieldStmt(elseBlock)
-    case STry(body, except) => hasYieldStmt(body) || hasYieldStmt(except)
-    case SWhile(cond, body) => hasYieldStmt(body)
+    case SDef(name, params, body) => hasYield(body)
+    case SIf(cond, thenBlock, elseBlock) => hasYield(thenBlock) || hasYield(elseBlock)
+    case STry(body, except) => hasYield(body) || hasYield(except)
+    case SWhile(cond, body) => hasYield(body)
     case _ => false
 
 
@@ -390,25 +462,25 @@ object Implementation extends Template {
         case (x1::xss, y1::yss) => 
           (lessThan(x1, y1, mem), equal(x1, y1, mem)) match
             case (Some(bLt), bEq) => 
-              if bLt then true
-              else if !bLt && !bEq then false
-              else lessThan(xss, yss, mem)
-            case _ => false
-        case _ => false
-    case _ => false
+              if bLt then Some(true)
+              else if !bLt && !bEq then Some(false)
+              else lessThan(ListV(xss), ListV(yss), mem)
+            case _ => None
+        case _ => None
+    case _ => None
           
   // NumV를 Int로 바꾸기
   private def asInt(v: Value): Option[Int] = v match
-    case NumV(n) => Some(n)
+    case NumV(n) => Some(n.toInt)
     case _ => None
   
   // 아마도 점프할 cont가 멀쩡한 녀석인지 확인하기 위함인듯
   private def isTruthy(v: Value, mem: Mem): Boolean = v match
     case NoneV => false
-    case NumV(n) if n!=0 => n
+    case NumV(n) => n!=0 
     case BoolV(b) => b
     case AddrV(a) => isTruthy(mem(a), mem)
-    case ListV(xs) => 0<n
+    case ListV(xs) => 0 < xs.length
     case _ => true
 
       
@@ -417,15 +489,15 @@ object Implementation extends Template {
   // 블록 안 지역 변수 집합
   def locals(block: Block): Set[String] = 
     block.stmts.foldLeft(Set.empty[String]) {
-      (acc, stmt) => acc + localsOfStmt(stmt)
+      (acc, stmt) => acc ++ localsOfStmt(stmt)
     }
 
   def localsOfStmt(stmt: Stmt): Set[String] = stmt match
-    case SAssign(x, e) => Set(s)
-    case SDef(name, params, body) => Set(x0)
-    case SIf(cond, thenBlock, elseBlock) => localsOfStmt(thenBlock) ++ localsOfStmt(elseBlock)
-    case STry(body, except) => localsOfStmt(body) ++ localsOfStmt(except)
-    case SWhile(cond, body) => localsOfStmt(body)
+    case SAssign(x, e) => Set(x)
+    case SDef(name, params, body) => Set(name)
+    case SIf(cond, thenBlock, elseBlock) => locals(thenBlock) ++ locals(elseBlock)
+    case STry(body, except) => locals(body) ++ locals(except)
+    case SWhile(cond, body) => locals(body)
     case _ => Set.empty
   
 }
