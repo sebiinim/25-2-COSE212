@@ -14173,3 +14173,87 @@ Exception in thread "pool-6-thread-2" java.lang.InterruptedException
 2025.11.18 23:06:17 INFO  time: compiled root in 0.81s
 2025.11.18 23:06:22 INFO  compiling root (5 scala sources)
 2025.11.18 23:06:22 INFO  time: compiled root in 0.69s
+2025.11.18 23:07:23 INFO  compiling root (5 scala sources)
+2025.11.18 23:07:23 INFO  time: compiled root in 0.94s
+2025.11.18 23:07:55 INFO  compiling root (5 scala sources)
+2025.11.18 23:07:55 INFO  time: compiled root in 0.68s
+2025.11.18 23:11:39 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw3-mini-python/src/main/scala/kuplrg/Implementation.scala]
+2025.11.18 23:11:39 INFO  empty definition using pc, found symbol in pc: kuplrg/Value.BoolV. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-11-39-835.md")
+2025.11.18 23:11:40 INFO  empty definition using pc, found symbol in pc: kuplrg/Value.BoolV. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-11-39-835.md")
+2025.11.18 23:12:29 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw3-mini-python/src/main/scala/kuplrg/Implementation.scala]
+2025.11.18 23:12:29 INFO  empty definition using pc, found symbol in pc: kuplrg/MiniPython$package.Mem# (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-12-29-803.md")
+2025.11.18 23:12:29 INFO  empty definition using pc, found symbol in pc: kuplrg/MiniPython$package.Mem# (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-12-29-803.md")
+2025.11.18 23:14:13 INFO  empty definition using pc, found symbol in pc: kuplrg/Value.BoolV. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-11-39-835.md")
+2025.11.18 23:14:35 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw3-mini-python/src/main/scala/kuplrg/Implementation.scala]
+2025.11.18 23:14:35 INFO  empty definition using pc, found symbol in pc: kuplrg/Inst.IExpr. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-14-35-969.md")
+2025.11.18 23:14:50 INFO  empty definition using pc, found symbol in pc: kuplrg/Inst.IExpr. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-14-35-969.md")
+2025.11.18 23:14:50 INFO  empty definition using pc, found symbol in pc: kuplrg/Inst.IExpr. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-14-35-969.md")
+2025.11.18 23:14:58 INFO  empty definition using pc, found symbol in pc: kuplrg/Inst.IExpr. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-14-35-969.md")
+2025.11.18 23:15:00 INFO  empty definition using pc, found symbol in pc: kuplrg/Inst.IExpr. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-14-35-969.md")
+2025.11.18 23:15:13 INFO  empty definition using pc, found symbol in pc: kuplrg/Value.BoolV. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-11-39-835.md")
+2025.11.18 23:15:13 INFO  empty definition using pc, found symbol in pc: kuplrg/Value.BoolV. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-11-39-835.md")
+2025.11.18 23:31:59 INFO  empty definition using pc, found symbol in pc: kuplrg/Value.BoolV. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-11-39-835.md")
+2025.11.18 23:31:59 INFO  empty definition using pc, found symbol in pc: kuplrg/Value.BoolV. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-11-39-835.md")
+Exception in thread "pool-6-thread-3" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:207)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025.11.18 23:37:52 INFO  empty definition using pc, found symbol in pc: kuplrg/Value.BoolV. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-11-39-835.md")
+11월 18, 2025 11:40:46 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4098
+2025.11.18 23:41:16 INFO  empty definition using pc, found symbol in pc: `<none>`. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_02-29-29-574.md")
+2025.11.18 23:41:16 INFO  empty definition using pc, found symbol in pc: `<none>`. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_02-29-29-574.md")
+2025.11.18 23:48:59 INFO  compiling root (5 scala sources)
+2025.11.18 23:49:08 INFO  time: compiled root in 8.83s
+2025.11.18 23:49:08 INFO  compiling root (5 scala sources)
+2025.11.18 23:49:10 INFO  time: compiled root in 2.87s
+11월 18, 2025 11:49:25 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4471
+11월 18, 2025 11:49:30 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4511
+11월 18, 2025 11:49:37 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4566
+11월 18, 2025 11:49:43 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4639
+11월 18, 2025 11:49:43 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 4642
+2025.11.18 23:49:46 INFO  compiling root (5 scala sources)
+2025.11.18 23:49:49 INFO  time: compiled root in 3.27s
+2025.11.18 23:49:51 INFO  compiling root (5 scala sources)
+2025.11.18 23:49:53 INFO  time: compiled root in 1.85s
+2025.11.18 23:50:18 INFO  compiling root (5 scala sources)
+2025.11.18 23:50:19 INFO  time: compiled root in 1.26s
+Exception in thread "pool-7-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:207)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Exception in thread "pool-7-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:207)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025.11.18 23:50:48 INFO  compiling root (5 scala sources)
+2025.11.18 23:50:49 INFO  time: compiled root in 1.48s
+2025.11.18 23:54:30 INFO  compiling root (5 scala sources)
+2025.11.18 23:54:40 INFO  time: compiled root in 9.25s
+2025.11.18 23:54:45 INFO  compiling root (5 scala sources)
+2025.11.18 23:54:50 INFO  time: compiled root in 4.3s
+2025.11.18 23:55:00 WARN  Could not find 'Value' using presentation compiler nor semanticdb. Trying to guess the definition using available information from local class context. 
+2025.11.18 23:55:00 INFO  empty definition using pc, found symbol in pc: `<none>`. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_02-02-20-276.md")
+2025.11.18 23:55:00 WARN  Could not find 'Value' using presentation compiler nor semanticdb. Trying to guess the definition using available information from local class context. 
+2025.11.18 23:55:00 INFO  empty definition using pc, found symbol in pc: `<none>`. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_02-02-20-276.md")
+Exception in thread "pool-6-thread-4" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:207)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

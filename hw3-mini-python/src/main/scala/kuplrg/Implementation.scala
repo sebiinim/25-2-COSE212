@@ -36,7 +36,7 @@ object Implementation extends Template {
 
             // SetItem e0[e1]=e2
             case SSetItem(e0, e1, e2) =>
-              State(IExpr(env, e2) :: IExpr(env, e0) :: IExpr(env, e1) :: ks, s, h, m)
+              State(IExpr(env, e2) :: IExpr(env, e0) :: IExpr(env, e1) :: ISetItem :: ks, s, h, m)
 
             // If cond then B else B
             case SIf(cond, thenB, elseB) => 
@@ -188,6 +188,7 @@ object Implementation extends Template {
               s match 
                 case v :: ss => 
                   State(ks, ss, h, m + (addr->v))
+                case _ => State(IRaise(TypeError) :: Nil, s, h, m)
               
           // addr에 해당하는 list에서 n번째 값을 읽는 inst
           case IGetItem => 
@@ -197,10 +198,11 @@ object Implementation extends Template {
                   case (Some(n), Some(ListV(xs))) => 
                     val len = xs.length // 리스트 길이
 
-                    if -len <= n && n<=0 then State(ks, xs(len+n) :: rest, h, m)
+                    if -len <= n && n<0 then State(ks, xs(len+n) :: rest, h, m)
                     else if 0<=n && n<len then State(ks, xs(n) :: rest, h, m)
                     else if n< -len || len<=n then State(IRaise(IndexError) :: Nil, s, h, m)
                     else State(IRaise(IndexError) :: Nil, s, h, m)
+                  case _ => State(IRaise(IndexError) :: Nil, s, h, m)
               case _ => State(IRaise(IndexError) :: Nil, s, h, m)
                 
           // addr에 해당하는 list의 n번째 값을 설정하는 inst
@@ -211,24 +213,32 @@ object Implementation extends Template {
                   case (Some(n), Some(ListV(xs))) => 
                     val len = xs.length // 리스트 길이
 
-                    if -len<=n && n<=0 then 
+                    if -len<=n && n<0 then 
                       val updatedList = xs.updated(len+n, v)
                       State(ks, rest, h, m + (addr->ListV(updatedList)))
+
                     else if 0<=n && n<len then 
                       val updatedList = xs.updated(n, v)
-                      State(ks, xs(n) :: rest, h, m + (addr->ListV(updatedList)))
-                    else if n< -len || len<=n then State(IRaise(IndexError) :: Nil, s, h, m)
-                    else State(IRaise(IndexError) :: Nil, s, h, m)
-              case _ => State(IRaise(IndexError) :: Nil, s, h, m)
+                      State(ks, rest, h, m + (addr->ListV(updatedList)))
+
+                    else if ((n< -len) || (len<=n)) then State(IRaise(IndexError) :: Nil, rest, h, m)
+                    else State(IRaise(TypeError) :: Nil, rest, h, m)
+                  case _ => State(IRaise(TypeError) :: Nil, rest, h, m)
+              case _ => State(IRaise(TypeError) :: Nil, s, h, m)
 
           // 리스트 만들기
           case IList(length) => 
-            // 스택에서 n개 뽑기, splitAt 사용
+            // 스택에서 length개 뽑기, splitAt 사용
             val (values, rest) = s.splitAt(length)
+
+            //에러 처리
+            if values.length != length then 
+              State(IRaise(TypeError) :: Nil, s, h, m)
+
             val vs = values.reverse // 스택이니까 뒤집혀 있을 거다.
             val addr = newAddr(m)
-            val mem = m + (addr -> ListV(vs))
-            State(ks, AddrV(addr) :: s, h, mem)
+            val mem1 = m + (addr -> ListV(vs))
+            State(ks, AddrV(addr) :: rest, h, mem1) // s에서 values를 뺀 rest를 써야 하는데 다시 s를 쓰고 있었다.
 
           // 리스트에 원소 추가
           case IAppend =>
@@ -270,7 +280,7 @@ object Implementation extends Template {
             else 
               error(err.str)
 
-          //
+          // 함수 실행
           case ICall(argsize) => 
             val (argsRev, rest) = s.splitAt(argsize) // vn, ... , v1과 a, s로 나눔
             
@@ -285,8 +295,9 @@ object Implementation extends Template {
                     val paramsAddrs = newAddrs(m, params.length)  // a1, ..., an
                     val mem1 = m ++ (paramsAddrs.zip(args))
 
-                    val localNames = locals(body).toList
-                    val localAddrs = newAddrs(m, localNames.length)
+                    val paramSet = params.toSet 
+                    val localNames = locals(body).filterNot(paramSet).toList  // 로컬 변수에서 param은 빼기
+                    val localAddrs = newAddrs(mem1, localNames.length)  // 여기에 mem1대신 m을 스고 있었음
                     val mem2 = localAddrs.foldLeft(mem1) {
                       case (mm, a) => mm + (a -> NoneV)
                     }
@@ -297,7 +308,7 @@ object Implementation extends Template {
                     val envBody = cloEnv ++ envParams ++ envLocals
 
                     // H_body 만들기
-                    val psiReturn = KValue(k, s, h)
+                    val psiReturn = KValue(ks, rest2, h)  // 여기에 ks, rest2대신 k, s를 쓰고 있었음
                     val hBody = h + (Return->psiReturn)
 
                     // k_prime 만들기
@@ -312,8 +323,9 @@ object Implementation extends Template {
                     val mem1 = m ++ (paramsAddrs.zip(args))
 
                     // block B 내부 지역 변수 집합
-                    val localNames = locals(body).toList
-                    val localAddrs = newAddrs(m, localNames.length) // a'1, a'2, ..., a'm
+                    val paramSet = params.toSet 
+                    val localNames = locals(body).filterNot(paramSet).toList
+                    val localAddrs = newAddrs(mem1, localNames.length) // a'1, a'2, ..., a'm
 
                     val mem2 = localAddrs.foldLeft(mem1) {
                       case (mm, a) => mm + (a -> NoneV)
@@ -349,13 +361,13 @@ object Implementation extends Template {
               case Some(KValue(kp, sp, hp)) => 
                 s match 
                   case v :: ss => 
-                    State(ks, v :: sp, hp, m)
+                    State(kp, v :: sp, hp, m) // 여기서 kp대신 ks를 쓰고 있었음.
                   case _ => State(IRaise(TypeError) :: Nil, s, h, m)
-              case _ => State(IRaise(RuntimeError) :: Nil, s, h, m)
+              case _ => State(IRaise(RuntimeError) :: Nil, s, h, m) 
 
-          // 
+          // 실행 중간에 값 내보내기(Iter)
           case IYield => 
-            h.get(Return) match
+            h.get(Yield) match
               case Some(KValue(kp, sp, hp)) => 
                 s match
                   case v :: rest => 
@@ -381,18 +393,21 @@ object Implementation extends Template {
             s match
               case AddrV(addr) :: rest =>
                 m.get(addr) match   // v
-                  case Some(IterV(addr2, idx)) =>
+                  case Some(IterV(addr2, idx)) => // v = Iter[a', m]
                     m.get(addr2) match  // v' 
-                      case Some(ContV(KValue(kp, sp, hp))) =>
+                      case Some(ContV(KValue(kp, sp, hp))) => // v′= <k′ ||s′ ||H′⟩
                         val psiYield = KValue(IWrite(addr2) :: ks, rest, h)
-                        val psiReturn = KValue(IDrop :: IRaise(StopIteration) :: Nil, rest, h)
+                        val psiReturn = KValue(IDrop :: IRaise(StopIteration) :: Nil, rest, h)  // 여기가 문제!
                         val hNext = hp + (Yield->psiYield) + (Return->psiReturn)
                         State(kp, sp, hNext, m)
+
                       case Some(ListV(xs)) =>
                         val mNext = m + (addr->IterV(addr2, idx+1))
                         if (idx < xs.length.toInt) then State(ks, xs(idx) :: rest, h, mNext) 
-                        else State(IRaise(StopIteration) :: Nil, s, h, m)
-                  case _ => State(IRaise(TypeError) :: Nil, s, h, m)
+                        else State(IRaise(StopIteration) :: Nil, rest, h, m)
+
+                      case _ => State(IRaise(TypeError) :: Nil, rest, h, m)
+                  case _ => State(IRaise(TypeError) :: Nil, rest, h, m)
               case _ => State(IRaise(TypeError) :: Nil, s, h, m)
 
           //
@@ -400,9 +415,9 @@ object Implementation extends Template {
             s match
               case v :: rest =>
                 State(ks, rest, h, m)
+              case _ => 
+                State(IRaise(TypeError) :: Nil, s, h, m)  
 
-          case _ => 
-            State(IRaise(TypeError) :: Nil, s, h, m)
 
   // Helper func
   // 안 쓰인 주소 만드는 함수
@@ -454,6 +469,7 @@ object Implementation extends Template {
     case(AddrV(a1), AddrV(a2)) => 
       (mem.get(a1), mem.get(a2)) match
         case (Some(v1p), Some(v2p)) => lessThan(v1p, v2p, mem)
+        case _ => error("err")  // 일단 경고 방지
         
     // 리스트인 경우. 빈 리스트는 시작이 Nil인걸 이용하자. 하나씩 차근차근
     case (ListV(xs), ListV(ys)) =>

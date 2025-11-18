@@ -250,6 +250,7 @@ enum Error:
   case IndexError
   case StopIteration
   case NameError(name: String)
+  case HahaError
 
   // the string form of an error
   def str: String = this match
