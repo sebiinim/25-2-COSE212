@@ -139,9 +139,10 @@ object Implementation extends Template {
               case EApp(fun, args) => 
                 State(IExpr(env, fun) :: args.map(IExpr(env, _)) ::: ICall(args.length) :: ks, s, h, m)
 
+              // 명세의 ECond에서 e0: thenExpr, e1: Cond, e2: elseExpr이다!
               case ECond(cond, thenExpr, elseExpr) => 
-                val psi = KValue(IExpr(env, cond) :: ks, s, h)
-                State(IExpr(env, thenExpr) :: IJmpIf(psi) :: IExpr(env, elseExpr) :: ks, s, h, m)
+                val psi = KValue(IExpr(env, thenExpr) :: ks, s, h)
+                State(IExpr(env, cond) :: IJmpIf(psi) :: IExpr(env, elseExpr) :: ks, s, h, m)
 
               case EIter(expr) => 
                 State(IExpr(env, expr) :: IIter :: ks, s, h, m)
@@ -436,14 +437,16 @@ object Implementation extends Template {
     case _ => false
   
   private def equal(v1: Value, v2: Value, mem: Mem): Boolean = (v1, v2) match
-    case _ if is(v1, v2) => true
+    case _ if is(v1, v2) => 
+      true
     case (AddrV(a1), AddrV(a2)) => 
       (mem.get(a1), mem.get(a2)) match 
         case (Some(v1p), Some(v2p)) => equal(v1p, v2p, mem)
         case _ => false
     case (ListV(xs), ListV(ys)) if xs.length == ys.length => 
       xs.zip(ys).forall {(x, y) => equal(x, y, mem)} 
-    case _ => false
+    case _ => 
+      false
   
   // 하이고많다. lessThan은 Option임에 주의하자
   private def lessThan(v1: Value, v2: Value, mem: Mem): Option[Boolean] = (v1, v2) match

@@ -14053,3 +14053,123 @@ Exception in thread "pool-5-thread-2" java.lang.InterruptedException
 2025.11.18 17:30:33 INFO  Shut down connection with build server.
 2025.11.18 17:30:33 INFO  Shut down connection with build server.
 2025.11.18 17:30:32 INFO  Exiting server
+2025.11.18 22:49:44 INFO  Started: Metals version 1.6.3 in folders 'D:\coding\COSE212-plrg-hw\hw3-mini-python' for client Visual Studio Code 1.106.1.
+2025.11.18 22:49:46 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.18 22:49:46 INFO  no build target found for D:\coding\COSE212-plrg-hw\hw3-mini-python\src\main\scala\kuplrg\Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.11.18 22:49:47 INFO  Attempting to connect to the build server...
+2025.11.18 22:49:47 INFO  No running Bloop server found, starting one.
+2025.11.18 22:49:50 INFO  Starting compilation server
+2025.11.18 22:49:52 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\bsp.trace.json or C:\Users\sebin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.11.18 22:49:52 INFO  Attempting to connect to the build server...
+2025.11.18 22:49:52 INFO  Found a Bloop server running
+2025.11.18 22:49:52 INFO  Attempting to connect to the build server...
+2025.11.18 22:49:52 INFO  Found a Bloop server running
+2025.11.18 22:49:53 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\coding\COSE212-plrg-hw\hw3-mini-python\project\project\.metals\bsp.trace.json or C:\Users\sebin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.11.18 22:49:53 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\coding\COSE212-plrg-hw\hw3-mini-python\project\.metals\bsp.trace.json or C:\Users\sebin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.11.18 22:49:53 INFO  time: Connected to build server in 6.23s
+2025.11.18 22:49:53 INFO  Connected to Build server: Bloop v2.0.16
+2025.11.18 22:49:54 INFO  time: Imported build in 0.34s
+2025.11.18 22:49:54 WARN  3.3.3 is no longer supported in the current Metals versions, using the last known supported version 1.5.1
+2025.11.18 22:50:00 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.18 22:50:03 INFO  time: indexed workspace in 9.2s
+2025.11.18 22:50:04 INFO  compiling root (5 scala sources)
+2025.11.18 22:50:11 INFO  time: compiled root in 7.39s
+2025.11.18 22:50:50 INFO  compiling root (5 scala sources)
+2025.11.18 22:50:51 INFO  time: compiled root in 1.11s
+11월 18, 2025 10:51:25 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 333
+2025.11.18 22:51:26 INFO  compiling root (5 scala sources)
+2025.11.18 22:51:26 INFO  time: compiled root in 0.98s
+Exception in thread "pool-6-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:207)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025.11.18 22:52:14 INFO  compiling root (5 scala sources)
+2025.11.18 22:52:15 INFO  empty definition using pc, found symbol in pc: `<none>`. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_02-02-20-276.md")
+2025.11.18 22:52:16 INFO  time: compiled root in 1.11s
+2025.11.18 22:52:36 INFO  compiling root (5 scala sources)
+2025.11.18 22:52:36 INFO  time: compiled root in 0.61s
+2025.11.18 22:52:42 INFO  empty definition using pc, found symbol in pc: `<none>`. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_02-02-20-276.md")
+2025.11.18 22:52:49 INFO  compiling root (5 scala sources)
+2025.11.18 22:52:49 INFO  time: compiled root in 0.89s
+11월 18, 2025 10:55:39 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 765
+2025.11.18 22:55:43 INFO  compiling root (5 scala sources)
+2025.11.18 22:55:43 INFO  time: compiled root in 0.53s
+11월 18, 2025 10:55:58 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 867
+2025.11.18 22:56:07 INFO  compiling root (5 scala sources)
+2025.11.18 22:56:07 INFO  time: compiled root in 0.42s
+2025.11.18 22:56:19 INFO  compiling root (5 scala sources)
+2025.11.18 22:56:19 INFO  time: compiled root in 0.38s
+2025.11.18 22:56:32 INFO  compiling root (5 scala sources)
+2025.11.18 22:56:32 INFO  time: compiled root in 0.36s
+2025.11.18 22:56:52 INFO  compiling root (5 scala sources)
+2025.11.18 22:56:52 INFO  time: compiled root in 0.32s
+11월 18, 2025 10:57:00 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 1281
+2025.11.18 22:57:27 INFO  compiling root (5 scala sources)
+2025.11.18 22:57:27 INFO  time: compiled root in 0.35s
+2025.11.18 22:57:47 INFO  empty definition using pc, found symbol in pc: `<none>`. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_02-02-20-276.md")
+2025.11.18 22:57:47 INFO  empty definition using pc, found symbol in pc: `<none>`. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_02-02-20-276.md")
+2025.11.18 22:57:47 INFO  empty definition using pc, found symbol in pc: `<none>`. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_02-02-20-276.md")
+2025.11.18 22:57:55 INFO  compiling root (5 scala sources)
+2025.11.18 22:57:55 INFO  time: compiled root in 0.3s
+11월 18, 2025 10:58:24 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 1685
+2025.11.18 22:58:24 INFO  compiling root (5 scala sources)
+2025.11.18 22:58:24 INFO  time: compiled root in 0.32s
+2025.11.18 22:58:39 INFO  compiling root (5 scala sources)
+2025.11.18 22:58:39 INFO  time: compiled root in 0.53s
+2025.11.18 22:59:03 INFO  compiling root (5 scala sources)
+2025.11.18 22:59:03 INFO  time: compiled root in 0.41s
+2025.11.18 22:59:15 INFO  compiling root (5 scala sources)
+2025.11.18 22:59:15 INFO  time: compiled root in 0.52s
+2025.11.18 23:00:07 INFO  compiling root (5 scala sources)
+2025.11.18 23:00:07 INFO  time: compiled root in 0.43s
+2025.11.18 23:00:11 INFO  compiling root (5 scala sources)
+2025.11.18 23:00:11 INFO  time: compiled root in 0.28s
+2025.11.18 23:00:13 INFO  compiling root (5 scala sources)
+2025.11.18 23:00:13 INFO  time: compiled root in 0.56s
+2025.11.18 23:00:40 INFO  compiling root (5 scala sources)
+2025.11.18 23:00:40 INFO  time: compiled root in 0.22s
+2025.11.18 23:00:49 INFO  compiling root (5 scala sources)
+2025.11.18 23:00:49 INFO  time: compiled root in 0.66s
+2025.11.18 23:01:13 INFO  compiling root (5 scala sources)
+2025.11.18 23:01:13 INFO  time: compiled root in 0.32s
+11월 18, 2025 11:02:37 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 2288
+2025.11.18 23:02:53 INFO  compiling root (5 scala sources)
+2025.11.18 23:02:53 INFO  time: compiled root in 0.34s
+2025.11.18 23:03:20 INFO  empty definition using pc, found symbol in pc: `<none>`. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_02-02-20-276.md")
+2025.11.18 23:04:15 INFO  compiling root (5 scala sources)
+2025.11.18 23:04:15 INFO  time: compiled root in 0.23s
+2025.11.18 23:04:22 INFO  compiling root (5 scala sources)
+2025.11.18 23:04:22 INFO  time: compiled root in 0.56s
+2025.11.18 23:04:41 INFO  compiling root (5 scala sources)
+2025.11.18 23:04:41 INFO  time: compiled root in 0.28s
+2025.11.18 23:04:57 INFO  compiling root (5 scala sources)
+2025.11.18 23:04:57 INFO  time: compiled root in 0.18s
+2025.11.18 23:05:00 INFO  empty definition using pc, found symbol in pc: `<none>`. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_02-02-20-276.md")
+2025.11.18 23:05:00 INFO  compiling root (5 scala sources)
+2025.11.18 23:05:02 INFO  time: compiled root in 1.5s
+Exception in thread "pool-6-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:207)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025.11.18 23:05:13 INFO  Created report: Optional[file:///D:/coding/COSE212-plrg-hw/hw3-mini-python/src/main/scala/kuplrg/Implementation.scala]
+2025.11.18 23:05:13 INFO  empty definition using pc, found symbol in pc: kuplrg/Value.ContV. (full report at: "D:\coding\COSE212-plrg-hw\hw3-mini-python\.metals\.reports\metals-full\2025-11-18\r_empty-definition_(root)_23-05-13-635.md")
+2025.11.18 23:05:49 INFO  compiling root (5 scala sources)
+2025.11.18 23:05:50 INFO  time: compiled root in 1.06s
+11월 18, 2025 11:06:16 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+경고: Unmatched cancel notification for request id 2876
+2025.11.18 23:06:17 INFO  compiling root (5 scala sources)
+2025.11.18 23:06:17 INFO  time: compiled root in 0.81s
+2025.11.18 23:06:22 INFO  compiling root (5 scala sources)
+2025.11.18 23:06:22 INFO  time: compiled root in 0.69s
